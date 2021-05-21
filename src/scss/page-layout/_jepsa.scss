@@ -1,0 +1,136 @@
+.jepsa-wrapper {
+    background: $grey-100;
+    
+    .grid.header {
+        justify-content: center;
+    }
+
+    .default-header {
+        text-align: center;
+    }
+
+    .test-link {
+        margin-left: rem-calc(80);
+    }
+
+    .star-rating {
+        .icon {
+            color: #E7711B;
+        }
+    }
+
+    .reviews-wrapper {
+        display: flex;
+
+        .left {
+            max-width: 695px;
+        }
+
+        > .right {
+            flex: 1;
+            padding-left: 2rem;
+        }
+    }
+
+    .review-box {
+        background: $white;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: rem-calc(30);
+        color: $title-color;   
+    }
+
+    .checkatrade-review {
+
+        .cat-intro {
+            text-transform: uppercase;
+            font-size: rem-calc(18);
+        }
+        .cat-logo {
+            padding: 1rem 0 0.5rem;
+        }
+        .cat-rating {
+            font-size: rem-calc(18);
+            color: $title-color;
+            padding-top: 0.5rem;
+        }
+
+        a {
+            color: $title-color;
+        }
+    }
+
+    .google-review {
+        margin-top: 2rem;
+
+        .google-logo {
+            .icon {
+                max-width: 194px;
+                max-height: 66px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        a {
+            color: $title-color;
+            margin-top: 0.5rem;
+        }
+
+    }    
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md')) {
+    .jepsa-wrapper {
+        padding-bottom: 2rem;
+        
+        .reviews-wrapper {
+            display: flex;
+    
+            .left {
+                max-width: 475px;
+            }
+        }
+
+        &.woocommerce-reviews {
+            .reviews-wrapper {
+                flex-direction: column;
+    
+                .left {
+                    max-width: 100%;
+                }
+                >.right {
+                    padding-left: 0;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+    .jepsa-wrapper {
+        padding-bottom: 3rem; 
+        
+        .reviews-wrapper {
+            flex-direction: column;
+
+            .left {
+                max-width: 100%;
+            }
+            >.right {
+                padding-left: 0;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .test-link {
+            margin-left: 0;
+            font-size: rem-calc(14);
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}

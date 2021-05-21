@@ -1,0 +1,46 @@
+.sidebar-section {
+    > .container {
+        padding: 0;
+
+        > .grid {
+            justify-content: space-between;
+        }
+    }
+
+    .column {
+        &.content {
+            flex-basis: 61%;
+        }
+        &.sidebar {
+            flex-basis: 33%;
+            border-left: 1px solid $grey-200;
+            padding-left: 3%;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .sidebar-section {
+        .column {
+            &.sidebar {
+                flex-basis: 38%;
+                padding-left: 0;
+            }
+        }
+    }
+
+}
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+    .sidebar-section {
+        .column {
+            &.content {
+                flex-basis: 100%;
+            }
+            &.sidebar {
+                flex-basis: 100%;
+                border-left: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}

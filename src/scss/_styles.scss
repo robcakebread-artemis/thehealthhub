@@ -1,0 +1,303 @@
+html {
+    font-family: $body-font;
+}
+
+body {
+    color: $body-font-color;
+    font-size: rem-calc($body-font-size);
+}
+a {
+    text-decoration: none;
+}
+p {
+
+    margin: 0 0 1.5rem 0;
+    //font-size: 1rem;
+    line-height: 175%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: $color-2;
+        font-weight: 600;
+
+        &:hover{
+            color: darken($color-2, 20%);
+        }
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-family: $title-font;
+    color: $title-color;
+    font-weight: 600;
+}
+h1 {
+    font-size: rem-calc(40);
+
+}
+h2 {
+    font-size: rem-calc(20);
+    color: $grey-700;
+    padding-bottom: 1rem;
+    display: inline-block;
+    margin-bottom: 0
+}
+h3 {
+    font-size: 1.25rem;
+}
+.default-header {
+    h1, h2 {
+        font-size: rem-calc(26);
+    }
+    .xs {
+        color: $color-1;
+        font-size: rem-calc(22);
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
+    h2.xs {
+        margin-bottom: 1rem;
+    }
+}
+.section-heading {
+    justify-content: center;
+    display: flex;
+
+    h1, h2 {
+        font-size: rem-calc(36);
+        display: inline-block;
+        font-weight: 400;
+        padding: 0 1rem;
+        margin: 0 auto 2.5rem;
+        letter-spacing: 0.5px;
+        border-bottom: 0;
+
+        &:after {
+           // @extend %header-line;
+        }        
+    }
+    h2 {
+        font-size: rem-calc(34);
+    }
+    &.with-intro {
+        h2 {
+            font-size: rem-calc(30);
+        }
+    }
+}
+h2.section-heading {
+    font-size: rem-calc(34);
+    margin: 0 0 2rem;
+
+    &:after {
+        //@extend %header-line;
+    }  
+}
+.intro-text {
+    font-family: $title-font;
+    font-size: rem-calc(19);
+}
+ul {
+    line-height: 1.5;
+}
+.color-1-bg {
+    background: $color-1;
+    color: $body-font-color;
+}
+.color-2-bg {
+    background: $color-2;
+    color: $white;
+    h2{
+        color: $white;
+    }
+    .grid {
+        .column {
+            .inner-text{
+                .button{
+                    background-color: $color-3 !important;
+                }
+            }
+        }
+    }
+}
+.color-3-bg {
+    background: $color-3;
+}
+.grey-300-bg {
+    background: $grey-100;
+}
+.grey-800-bg {
+    background: $grey-800;
+
+    @extend %light;
+}
+
+%light {
+    .section-heading {
+        h2 {
+            color: $white;
+        }
+    }
+    h2, h3 {
+        color: $white;
+        border-color: $color-3;
+
+        a {
+            color: $color-3;
+        }
+    }
+
+    p {
+        color: $white;
+        
+        a {
+            color: $color-3;
+            font-weight: 400;
+        }
+    }
+
+    ul {
+        li {
+            color: $white;
+
+            a {
+                color: $color-3;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .icon {
+        color: $white;
+    }   
+    
+    .link {
+        a {
+            color: $white;
+        }
+    }
+    .icon-link-text {
+        color: $white;
+    }
+
+    table {
+        color: $white;
+    }
+    figcaption {
+        color: $white;
+    }
+}
+table {
+    margin-bottom: 2rem;
+    line-height: 175%;
+}
+.read-more-toggle {
+    background: transparent;
+    color: $color-2;
+    padding: 5px 10px;
+    border: 2px solid $color-2;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.color-1-bg .read-more-toggle{
+    color: $white;
+    border: 2px solid $white;
+}
+
+* {
+    //border: 1px solid green;
+}
+
+body {
+    .ui-datepicker .ui-datepicker-title select.ui-datepicker-month, .ui-datepicker .ui-datepicker-title select.ui-datepicker-year {
+        color: #333;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;   
+}
+
+
+.no-hero {
+    .breadcrumb-wrapper {
+        background: $white;
+        border-bottom: 1px solid $grey-200;
+    }
+
+    &-page-header {
+        background: $color-2;
+        min-height: rem-calc(50);
+        padding: 0.5rem 1rem;
+        margin-bottom: 0;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    
+        h1, h2 {
+            margin-bottom: 0;
+            font-size: rem-calc(24);
+            color: $white;
+            letter-spacing: 1px;
+            bordeR: 0;
+            padding: 0;
+        }
+
+        p.subtitle {
+            margin: 0;
+            font-size: rem-calc(22);
+            font-weight: 600;
+            line-height: 136%;
+            color: $color-1;
+        }
+    }
+}
+
+.visible-mobile{
+    display: none;
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .section-heading h1, h1, .default-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-heading h2, h2, .default-header h2 {
+        font-size: 2rem;
+        //font-size: rem-calc(26);
+    }
+
+    .no-hero {
+        &-page-header {
+            padding: 1rem 0;
+        }
+    }
+
+    p {
+        font-size: rem-calc(14);
+    }
+
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'xs') ) {
+    .section-heading h1, .section-heading h2, h1, h2, .default-header h1, .default-header h2 {
+     //   font-size: 2rem;
+    }
+    .default-header .xs {
+        font-size: 1rem;
+    }    
+    body {
+        font-size: rem-calc($body-font-size-xs);
+    }
+    .visible-mobile{
+        display: block
+    }
+}

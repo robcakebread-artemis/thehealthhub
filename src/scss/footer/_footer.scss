@@ -1,0 +1,44 @@
+#colophon {
+	color: $footer-font-color;
+    padding: 4rem 0 1rem;
+    background: $footer-background-color;    
+    line-height: 1.75;
+    position: relative;
+
+    > .container > .grid {
+/*        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;*/
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+
+        .column {
+            flex: 1;
+            padding-right: 2rem;
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+                flex-basis: 100%;
+                margin-bottom: 2rem;
+            }            
+        }
+    }
+
+    .footer-wrapper {
+        padding-bottom: 3rem;
+    }
+
+    a {
+        color: $footer-link-color;
+    }
+
+    h3 {
+        font-family: $title-font;
+        color: $footer-font-color;
+        font-size: rem-calc(22);
+    }
+}

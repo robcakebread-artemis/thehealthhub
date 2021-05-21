@@ -1,0 +1,180 @@
+.panwe-wrapper {
+    .grid.header {
+        justify-content: center;
+    }
+
+    .default-header {
+        text-align: center;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .slide-content-wrapper {
+        //display: flex;
+        //align-items: center;
+        margin-top: 3rem;
+        
+        h3 {
+            width: 100%;
+            text-align: center;
+            margin-top: -3rem;
+            padding-bottom: 2rem;
+        }
+
+        .grid {
+            justify-content: space-between;
+            width: 100%;
+            text-align: center;
+
+            .column {
+                padding: 0 1rem;
+                box-sizing: border-box;
+                flex: 1;
+                position: relative;
+                padding-bottom: 3rem;
+
+                .item-icon .icon {
+                    font-size: 4rem;
+                }
+
+                a {
+                    .item-icon .icon {
+                        color: $title-color;
+                    }
+
+                    &:hover {
+                        .item-icon .icon {
+                            color: $color-1;
+                        }
+                    }
+                }
+
+
+                .item-title {
+                    margin-top: 0.5rem;
+                    font-size: 1.25rem;
+                    color: $title-color;
+                    font-weight: 600;
+                    line-height: 140%;
+                    padding: 0 1rem;
+                }
+
+                .button {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    left: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }    
+    .button-nav {
+        &.swiper-pagination {
+            flex-direction: row;
+        }
+
+        div.swiper-pagination-bullet {
+            width: 280px;
+            height: 70px;
+            font-weight: 500;
+            justify-content: center;
+            font-size: 22px;
+            background: $grey-300;
+            border: 0;
+            color: $white;
+            margin: 0 rem-calc(2);
+
+            &:first-child {
+                border-radius: 30px 0 0 30px;
+            }
+            &:last-child {
+                border-radius: 0 30px 30px 0;
+            }
+
+            &.swiper-pagination-bullet-active, &:hover {
+                background: $color-1;
+            }
+
+            span.title-icon {
+                font-size: 2rem;
+                padding-right: 1.5rem;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .panwe-wrapper {
+        .slide-content-wrapper {
+
+            padding: 1rem 0 0;
+            flex-direction: column;
+
+            .half {
+                &:last-child {
+                    padding: 1rem 0 0;
+                    text-align: center;
+                }
+            }
+
+            .grid {
+                .column {
+
+                    .item-title {
+                        font-size: 1rem;
+                        padding: 0;
+                    }
+                }
+            }            
+        }
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+    .panwe-wrapper {
+        .button-nav div.swiper-pagination-bullet {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+            &:last-child, &:first-child {
+                border-radius: rem-calc(30);
+                margin-bottom: 0.5rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .slide-content-wrapper {
+            padding: 0;
+
+            .grid {
+                .column {
+                    margin-bottom: 2rem;
+                    flex-basis: 50%;
+                    max-width: 50%;
+
+                    .item-title {
+                        font-size: 1rem;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'xs') ) {
+    .panwe-wrapper {
+        .slide-content-wrapper {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,317 @@
+.art-side-form {
+	position:fixed;
+	right:0;
+	background: #F2F2F2;
+	padding:20px;
+	z-index:999999999;
+	width:320px;
+	-webkit-box-shadow:0 0 12px 2px rgba(0,0,0,0.15);
+	box-shadow:0 0 12px 2px rgba(0,0,0,0.15);
+	-webkit-transform:translate3d(100%,0,0);
+	transform:translate3d(100%,0,0);
+	-webkit-transition:-webkit-transform .8s;
+	transition:-webkit-transform .8s;
+	-o-transition:transform .8s;
+	transition:transform .8s;
+	transition:transform 0.8s,-webkit-transform .8s;
+	-webkit-transition-timing-function:cubic-bezier(0.7,0,0.3,1);
+	-o-transition-timing-function:cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function:cubic-bezier(0.7,0,0.3,1);
+	top:calc(50% - 20em);
+}
+
+.art-side-form.open {
+	-webkit-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+
+.art-side-form .art-side-below-form {
+	font-size:14px;
+	text-align:center;
+	padding-top: 1rem;
+}
+
+.art-side-form .art-side-below-form a {
+	letter-spacing:0;
+	text-decoration:underline;
+}
+
+
+.art-side-form .art-side-form-tab {
+	position:absolute;
+	left:-50px;
+	width:50px;
+	height:200px;
+	background: linear-gradient(0deg, #523881, #523881), linear-gradient(0deg, #F7941D, #F7941D), #963CBD;
+	top:calc(50% - 100px);
+	border-radius:10px 0 0 10px;
+	color:#fff;
+	-webkit-box-shadow:-2px 0 5px 1px rgba(0,0,0,0.25);
+	box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+	cursor:pointer;
+}
+
+.art-side-form .art-side-form-side-text {
+	-webkit-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	transform:rotate(90deg);
+	margin:0;
+	width:0;
+	white-space:nowrap;
+	-webkit-transform-origin:bottom;
+	-ms-transform-origin:bottom;
+	transform-origin:bottom;
+	text-align:left;
+	position:absolute;
+	padding-bottom:15px;
+	font-size:14px;
+	text-transform:uppercase;
+	font-weight:800;
+	letter-spacing:.1em;
+}
+
+.art-side-form .art-side-form-side-icon {
+	position:absolute;
+	bottom:8px;
+	width:100%;
+	left:0;
+	font-size:20px;
+	text-align:center;
+}
+
+.art-side-form .gform_wrapper ul li.gfield {
+	margin-top: 0;
+}
+
+.art-side-form .frm_submit button {
+	width:100%;
+}
+
+.art-side-form h3 {
+	color:#0a2032;
+	margin-bottom:10px;
+	font-weight:800;
+	font-size: 1.5rem;
+}
+
+.art-side-form .frm_forms .frm_message {
+	color:green;
+	margin-bottom:40px;
+}
+
+.with-side-form .menu-contact-us.red-item {
+	display:none;
+}
+
+.close-cross {
+	position:absolute;
+	right:24px;
+	top:20px;
+	width:24px;
+	height:24px;
+	opacity:1;
+}
+
+.close-cross:hover {
+	opacity:.8;
+}
+
+.close-cross:after,
+.close-cross:before {
+	position:absolute;
+	left:15px;
+	content:' ';
+	height:23px;
+	width:2px;
+	background-color:#000;
+}
+
+.close-cross:before {
+	-webkit-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+
+.close-cross:after {
+	-webkit-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+
+#gform_confirmation_wrapper_2 {
+    padding-top: 2rem;
+}
+
+.art-side-form .gform_wrapper .top_label .ginput_container {
+	/*margin-top: 0;*/
+}
+
+.art-side-form .ginput_container textarea{
+	height: 80px;
+    width: 100%;
+    border-radius: 3px !important;
+}
+
+.art-side-form .gform_wrapper input, .art-side-form .gform_wrapper select {
+	border-radius: 3px !important;
+}
+
+.art-side-form .gform_wrapper .gfield_label {
+	font-size: 0.9rem;
+	display: none;
+}
+
+.art-side-form .gform_wrapper .field_sublabel_hidden_label {
+	margin-bottom: 0;
+}
+
+.art-side-form .gform_fields, .gfield_checkbox{
+	list-style: none;
+	padding: 0;
+}
+
+.art-side-form .gform_wrapper .description, .gform_wrapper .gfield_description, .gform_wrapper .gsection_description, .gform_wrapper .instruction {
+    font-size: .813em;
+    line-height: inherit;
+    clear: both;
+    font-family: inherit;
+    letter-spacing: normal;
+}
+
+.art-side-form h4{
+	font-size: 1.5rem;
+    color: #523881;
+    text-align: center;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+}
+
+.home-calc{
+	display: none;
+}
+
+.home-contact{
+	display: block;
+}
+
+@media only screen and (max-width:1025px) {
+
+}
+
+@media only screen and (max-width:736px) {
+	
+	.art-side-form .art-side-below-form {
+		padding-top: 0;
+	}
+	.gform_wrapper ul li.gfield {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.name_first,
+	.name_last {
+		width: 48%;
+		display: inline-block !important;
+	}
+		
+	.art-side-form {
+		display:block;
+		bottom:0;
+		top:auto;
+		width:auto;
+		left:auto;
+		-webkit-transform:translate3d(0,100%,0);
+		transform:translate3d(0,100%,0);
+	}
+	
+	.art-side-form.open .art-side-form-tab:after,
+	.art-side-form.open .art-side-form-tab:before {
+		position:absolute;
+		content:' ';
+		height:23px;
+		width:2px;
+		background-color:#fff;
+		right:24px;
+		top:13px;
+	}
+	
+	.art-side-form.open .art-side-form-tab:before {
+		-webkit-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		transform:rotate(45deg);
+	}
+	
+	.art-side-form.open .art-side-form-tab:after {
+		-webkit-transform:rotate(-45deg);
+		-ms-transform:rotate(-45deg);
+		transform:rotate(-45deg);
+	}
+	
+	.art-side-form .art-side-form-tab {
+		left:0;
+		width:100%;
+		height:50px;
+		border-radius:0;
+		top:-50px;
+		text-align:center;
+		padding-top:7px;
+	}
+	
+	.art-side-form .art-side-form-side-text {
+		padding: 10px 0;
+		letter-spacing:.1em;
+		display:inline-block;
+		margin-right:10px;
+		font-size:16px;
+		position:relative;
+		-webkit-transform:none;
+		-ms-transform:none;
+		transform:none;
+		width:auto;
+	}
+	
+	.art-side-form .art-side-form-side-icon {
+		position:relative;
+		width:auto;
+		font-size:24px;
+		text-align:center;
+		display:inline-block;
+		bottom:auto;
+	}
+	
+	.art-side-form .close-cross {
+		display:none;
+	}
+	
+	.with-side-form footer {
+		padding-bottom:50px;
+	}
+	
+	.art-side-form-inner {
+		max-height:70vh;
+		overflow:auto;
+	}
+
+	.home-calc{
+		display: block;
+	}
+	.home-contact{
+		display: none;
+	}
+	
+}
+
+
+#gform_submit_button_3 {
+	background-color: #F7941D;
+	font-weight: 900;
+	transition: 0.3s;
+	padding: 0.25rem 1rem;
+    height: 2rem;
+}
+
+
+#gform_submit_button_3:hover {
+ 	background-color: #b96807;
+}

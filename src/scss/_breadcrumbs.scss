@@ -1,0 +1,22 @@
+.breadcrumb-wrapper {
+    background: $white;
+    padding: rem-calc(5) 0;
+    //margin: 0 0 2rem;
+
+    #breadcrumbs {
+        font-size: rem-calc(13);
+        text-align: left;
+        color: $body-font-color;
+        margin: 0;
+
+        a {
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+    .breadcrumb-wrapper #breadcrumbs {
+        font-size: rem-calc(12);
+    }
+}

@@ -1,0 +1,38 @@
+.contactwidget {
+    line-height: 1.5;
+
+    .cw-grid {
+/*        display: grid;
+        grid-template-columns: 1.25rem auto;
+        grid-gap: 1rem;*/
+        display: flex;
+        text-align: left;
+    }
+    .cw-hours {
+        margin-top: 1rem;
+    }
+    .cw-icon {
+        color: $color-3;
+        padding-right: 1rem;
+        font-size: rem-calc(18);
+    }
+    .cw-text {
+        font-size: rem-calc(14);
+    }
+    .cw-email {
+        margin-top: 0.5rem;
+    }
+    .cw-address {
+        margin-bottom: 1rem;
+
+        .cw-text {
+            font-size: rem-calc(14);
+        }
+    }    
+}
+#colophon .cw-text a {
+    color: $color-3;
+    &:hover {
+        color: darken($color-3, 20%);
+    }
+}

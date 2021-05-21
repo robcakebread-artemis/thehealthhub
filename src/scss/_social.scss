@@ -1,0 +1,170 @@
+ul.social-icons{
+	overflow: hidden;
+	list-style: none;
+	margin: 0 auto;
+    padding: 0;
+    
+    li {
+        list-style-type: none;
+        float: left;   
+        background: none;
+
+        a .icon {
+            color: $social-icons-color;
+            font-size: rem-calc(32);
+            margin-right: 0.5rem;
+            transition: all 0.2s ease-in-out;
+            padding: 0;
+        }  
+        
+        &:last-child a .icon {
+            margin-right: 0;
+        }
+    }    
+}
+ul.social-icons.light {
+    li {
+        a .icon {
+            color: $social-icons-color-light;
+        }
+    }
+}
+
+#colophon ul.social-icons{
+    li {
+        a .icon {
+            color: $footer-social-icons-color;
+            font-size: rem-calc(25);
+        }  
+    }
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $grey-500;
+    margin-bottom: 0.5rem;
+    width: auto;
+    max-width: 200px;
+
+}
+.social.fa-twitter:hover {
+    color: #00aced !important;
+}
+.social-link.facebook:hover .icon {
+    color: #2d4372 !important;
+}
+.social-link.linkedin:hover .icon {
+    color: #1683bb !important;   
+}
+.social-link.instagram:hover .icon {
+    color: #be2fa1 !important;
+    color: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%) !important;
+}
+.social.fa-pinterest-p:hover {
+	color: #b70b1a !important;
+}
+.social.fa-youtube:hover {
+	color: #cc181e !important;
+}
+.social.fa-phone {
+    background: #e31c79 !important;
+}
+.social-icons .phone-link {
+	font-size: 1rem;
+}
+.float-right ul.social-icons {
+    float: right;
+
+    li a i {
+        margin-left: rem-calc(5px);
+    }    
+}
+@media screen and (min-width: 50em) {
+	ul.social-icons{
+		margin: 0;
+	}
+}
+/* SOCIAL END */
+
+
+/* SOCIAL SHARE ICONS */
+.art-social-link {
+    padding: 0 !important;
+    border-radius: 100%;
+    margin-right: 16px;
+    cursor: pointer;
+    margin-top: 0;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;    
+    text-decoration: none;
+    color: #fff;
+    font-size:20px;
+    font-family: "Font Awesome 5 Brands";
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-weight: 900;
+
+    &:hover, &:active {
+        color: white;
+        text-decoration: none;
+    }
+}
+.art-social-twitter {
+    //background: #00aced;	
+    color: #00aced;	
+
+    &:before {
+        content: '\f099';
+    }
+
+    &:hover, &:active {
+        color: darken(#00aced,10%);	
+    }
+}
+.art-social-facebook {
+    //background: #3B5997;
+    color: #3B5997;
+
+    &:before {
+        content: '\f39e';
+    }
+
+    &:hover, &:active {
+        color: darken(#3B5997,10%);	
+    }    
+}
+	
+.art-social-pinterest {
+    //background: #bd081c;
+    color: #bd081c;
+    
+    &:before {
+        content: '\f231';
+    }
+
+    &:hover, &:active {
+        color: #9c0616;
+    }
+}
+.art-social-linkedin {
+    color: #006288;
+
+    &:before {
+        content: '\f0e1';
+    }
+
+    &:hover, &:active {
+        color: darken(#006288,10%);	
+    }
+}
+.art-social-link {
+    color: $color-1;
+}
+.art-social-social {
+    margin: 20px 0px 25px 0px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+}
+.art-social-icons {
+	font-size: 12px;
+}

@@ -1,0 +1,18 @@
+<?php
+    $image = wp_get_attachment_image(get_field('testimonial_author_image'), 'thumbnail');
+    $testimonial_title = get_field('testimonial_title');
+?>
+<div class="testimonial-content-wrapper">
+    <div class="testimonial-content-inner">   
+        <div class="test-author-image"><?= $image; ?></div>	
+        <div class="star-wrapper"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <div class="test-text">
+            <?php if ($testimonial_title): ?>
+                <h3><?= $testimonial_title; ?></h3>
+            <?php endif; ?>                                    
+            <?= the_content(); ?>
+        </div>
+        <div class="hr-line"></div>
+        <div class="test-author"><?= get_the_title(); ?></div>				                            
+    </div>
+</div>

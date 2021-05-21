@@ -1,0 +1,431 @@
+.button, button {
+    height: rem-calc(52px);
+    padding: 1rem 2rem;
+    background: $button-background-color;
+    color: $button-font-color;
+    font-size: rem-calc(14);
+    box-sizing: border-box;  
+    border-radius: $default-radius;
+    transition: all 0.3s;
+    border: 0;
+    font-weight: 600;
+    //text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.wireframe {
+        border: 2px solid $color-1;
+        background: transparent;
+        color: $color-1;
+
+        &:hover {
+            background: $color-1;
+            color: $white;
+        }
+    }
+    &.white {
+        border-color: $white;
+        color: $white;
+    }
+
+    &:hover {
+        background: darken($button-background-color, 10%);
+    }
+
+    &.plain {
+        color: $color-2;
+        background: none;
+        padding: 1rem 0;
+        height: auto;
+    }
+
+    .rs-icon-wrapper {
+        margin-left: 0.75rem;
+        background: transparent;
+        width: 1.5rem;
+        height: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    
+        .icon {
+            font-size: rem-calc(18);
+            transition: all .2s ease;
+            color: $white;
+        }
+    }
+
+    &.square {
+        border-radius: 0;
+    }
+    &.icon-link {
+        text-transform: none;
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &.orange {
+        background: $color-3;
+
+        &:hover {
+            background: darken($color-3, 10%);
+        }
+    }
+    &.large {
+        border-radius: 30px;
+        font-size: 26px;
+        padding: 2rem 2rem 2rem 1.25rem;
+        height: auto;
+        text-transform: none;
+        font-weight: 600;
+        line-height: 35px;
+
+        &.with-icon {
+            padding: 2rem 0.7rem 2rem 0;
+
+            .main-icon {
+                padding-right: rem-calc(16);
+
+                .icon {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    &.with-icon {
+        padding-left: 0.5rem;
+
+        .main-icon {
+            order: 0;
+            padding-right: rem-calc(10);
+            line-height: 1;
+
+            .icon {
+                font-size: 1.5rem;
+            }
+            .rs-icon-wrapper.rv {
+                .icon {
+                    font-size: rem-calc(30);
+                    margin-left: -6px;
+                }
+            }
+        }
+        .rs-icon-wrapper.arrow {
+            order: 99;
+        }
+        .title {
+            order: 1;
+            line-height: 1.25;
+        }
+    }
+
+    &:disabled {
+        //background: rgba($color-1, 0.5);
+        background: $grey-500;
+        pointer-events: none;
+        color: #fff;
+    }
+
+    &:hover {
+        .arrow .icon {
+            margin-left: 3px;
+            margin-right: -3px;
+
+        }
+    }
+}
+#colophon a.button {
+    color: $button-font-color;
+}
+
+button.arrow {
+    position: absolute;
+    color: $color-1;
+    background: none;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    &:after, &:before {
+        content: "";
+        position: absolute;
+        background-color: $color-1;
+        transition: transform 0.25s ease-out;
+        transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+    }    
+
+    &:before {
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        margin-left: -1px;
+    }
+    &:after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+    }
+    &.open {
+        &:after {
+            transform: rotate(180deg);
+        }
+        &:before {
+            transform: rotate(90deg);
+        }        
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .button {
+        &.large {
+            &.with-icon {
+                padding: 1rem 0.5rem;
+                box-sizing: border-box;
+
+                .title {
+                    font-size: 1.3rem;
+                    line-height: 1.5;
+                }
+
+                .main-icon {
+                    padding-right: 0.5rem;
+
+                    .icon {
+                        font-size: 3rem;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+    button, .button, .button.plain {
+        font-size: rem-calc(14);
+    }
+}
+
+.header-button, button {
+    height: rem-calc(45px);
+    padding: 0.75rem 2rem;
+    background: $color-3;
+    color: $white;
+    font-size: rem-calc(14);
+    box-sizing: border-box;  
+    border-radius: $default-radius;
+    transition: all 0.3s;
+    border: 0;
+    font-weight: 600;
+    //text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.wireframe {
+        border: 2px solid $color-1;
+        background: transparent;
+        color: $color-1;
+
+        &:hover {
+            background: $color-1;
+            color: $white;
+        }
+    }
+    &.white {
+        border-color: $white;
+        color: $white;
+    }
+
+    &:hover {
+        background: darken($color-3, 10%);
+        text-decoration: none !important;
+    }
+
+    &.plain {
+        color: $color-2;
+        background: none;
+        padding: 1rem 0;
+        height: auto;
+    }
+
+    .rs-icon-wrapper {
+        margin-left: 0.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    
+        .icon {
+            font-size: rem-calc(18);
+            transition: all .2s ease;
+            color: $white;
+        }
+    }
+
+    &.square {
+        border-radius: 0;
+    }
+    &.icon-link {
+        text-transform: none;
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &.orange {
+        background: $color-3;
+
+        &:hover {
+            background: darken($color-3, 10%);
+        }
+    }
+    &.large {
+        border-radius: 30px;
+        font-size: 26px;
+        padding: 2rem 2rem 2rem 1.25rem;
+        height: auto;
+        text-transform: none;
+        font-weight: 600;
+        line-height: 35px;
+
+        &.with-icon {
+            padding: 2rem 0.7rem 2rem 0;
+
+            .main-icon {
+                padding-right: rem-calc(16);
+
+                .icon {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    &.with-icon {
+        padding-left: 0.5rem;
+
+        .main-icon {
+            order: 0;
+            padding-right: rem-calc(10);
+            line-height: 1;
+
+            .icon {
+                font-size: 1.5rem;
+            }
+            .rs-icon-wrapper.rv {
+                .icon {
+                    font-size: rem-calc(30);
+                    margin-left: -6px;
+                }
+            }
+        }
+        .rs-icon-wrapper.arrow {
+            order: 99;
+        }
+        .title {
+            order: 1;
+            line-height: 1.25;
+        }
+    }
+
+    &:disabled {
+        //background: rgba($color-1, 0.5);
+        background: $grey-500;
+        pointer-events: none;
+        color: #fff;
+    }
+
+    &:hover {
+        .arrow .icon {
+            margin-left: 3px;
+            margin-right: -3px;
+
+        }
+    }
+}
+#colophon a.header-button {
+    color: $button-font-color;
+}
+
+button.arrow {
+    position: absolute;
+    color: $color-1;
+    background: none;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    &:after, &:before {
+        content: "";
+        position: absolute;
+        background-color: $color-1;
+        transition: transform 0.25s ease-out;
+        transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+    }    
+
+    &:before {
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        margin-left: -1px;
+    }
+    &:after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+    }
+    &.open {
+        &:after {
+            transform: rotate(180deg);
+        }
+        &:before {
+            transform: rotate(90deg);
+        }        
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .header-button {
+        &.large {
+            &.with-icon {
+                padding: 1rem 0.5rem;
+                box-sizing: border-box;
+
+                .title {
+                    font-size: 1.3rem;
+                    line-height: 1.5;
+                }
+
+                .main-icon {
+                    padding-right: 0.5rem;
+
+                    .icon {
+                        font-size: 3rem;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+    button, .header-button, .header-button.plain {
+        font-size: rem-calc(14);
+    }
+}

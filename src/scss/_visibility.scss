@@ -1,0 +1,42 @@
+@mixin bpmax($breakpoint) {
+  $query: map-get($gl-mq-list, $breakpoint);
+  $query: $query - (1 / 16);
+  @if $query != null {
+    @media ($gl-mq-width: #{nth($query, 1)}) {
+      @content;
+    }
+  }
+}
+
+@mixin bpmin($breakpoint) {
+  $query: map-get($gl-mq-list, $breakpoint);
+  @if $query != null {
+    @media (min-width: #{nth($query, 1)}) {
+      @content;
+    }
+  }
+}
+
+@mixin show-for($size) {
+	.show-for-#{$size} {
+		display: none !important;
+	}
+}
+
+@each $mq-key, $mq-value in $gl-mq-list {
+	@include bpmax(#{$mq-key}) {
+		@include show-for(#{$mq-key});
+	}
+}
+
+@mixin hide-for($size) {
+	.hide-for-#{$size} {
+		display: none !important;
+	}
+}
+
+@each $mq-key, $mq-value in $gl-mq-list {
+	@include bpmin(#{$mq-key}) {
+		@include hide-for(#{$mq-key});
+	}
+}

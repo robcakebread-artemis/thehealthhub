@@ -1,0 +1,30 @@
+.single {
+    &.single-post {
+        .entry-meta {
+            font-size: rem-calc(13);
+            margin-top: 0.5rem;
+            color: $white;
+        }
+
+        article {
+            section {
+                &.with-image {
+                    padding-top: 1rem;
+                }
+
+                padding-bottom: 4rem;
+
+                .wp-post-image {
+                    margin: 0 auto 2rem;
+                    display: flex;
+                }
+
+                .grid {
+                    .col {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

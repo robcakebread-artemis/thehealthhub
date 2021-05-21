@@ -1,0 +1,25 @@
+.pwaft-wrapper {
+    .grid {
+        .column {
+            width: 100%;
+        }
+    }
+
+    .default-header {
+        width: 100%;
+        text-align: left;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+
+    .content {
+        margin-top: 2rem;
+    }
+}

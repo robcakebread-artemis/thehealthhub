@@ -1,0 +1,271 @@
+/* Exit popup */
+/* Style for the modal and overlay*/
+
+.art-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 700px;
+    min-height: 440px;
+    z-index: 10000000;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    width: 100%;
+    
+    #close-button {
+        margin-top: 20px;
+    }
+
+	.frm_forms {
+		width: 75%;
+        margin: 0 auto;	
+        margin-top: 0;
+		
+		.frm_submit {
+			text-align: center;
+			
+			button {
+				float: none;
+			}
+        }
+        input[type=text], input[type=email], input[type=tel], input[type=number] {
+            background: $white;
+        }
+		button.frm_button_submit {
+            font-size: 20px;
+            text-transform: uppercase;
+            background: $color-1;
+            border: 1px solid $color-1;
+            width: 100%; 
+
+            &:hover, &:focus, &:active {
+                border-color: #fff;
+            }
+        }      
+        label {
+            color: $body-font-color;
+            font-weight: 400;
+            font-size: rem-calc(13);
+            line-height: 1.25rem;
+        }  
+        .frm_error_style {
+            font-size: 13px;
+            font-weight: 800;
+            padding-bottom: 0.5rem;
+            color: $warning-color;
+        }
+        .frm_error {
+            color: $warning-color;
+            margin: -0.3rem 0 0.3rem;
+            font-size: rem-calc(13);
+            text-align: left;
+        }
+    }
+    .frm_message {
+        font-size: 18px;
+        padding: 5px 10px;            
+    }    
+	.art-close-icon {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: -23px;
+        right: -18px;
+        z-index: 999;
+        cursor: pointer;
+        border: none;
+        transition: none;
+        background: $color-2;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 100%;
+        padding-top: 5px;
+        padding-left: 2px;
+        line-height: 40px;
+        padding: 0;
+        text-align: center;        
+		
+		&:before {
+			font-family: 'Font Awesome 5 Free';
+			content: '\f00d';
+			font-size: 1.5rem;
+            color: #fff;	
+            font-weight: 900;
+		}		
+	}
+}
+.art-show {
+    visibility: visible;
+}
+.art-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.75);
+    transition: all 0.3s;
+}
+.art-show ~ .art-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Content styles */
+
+.art-content {
+    background: $white;
+    position: relative;
+    border-radius: 0;
+    margin: 0 auto;
+    border-top: 4px solid $color-1;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+        margin-bottom: 0;
+    }
+    
+    h2, h3 {
+        color: $color-1;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+	 h3 {
+		margin: 0;
+		padding: 0.4em;
+		text-align: center;
+		font-size: 2.4em;
+		font-weight: 700;
+		border-radius: 3px 3px 0 0;
+	}	
+	> div {
+        padding: 20px 30px 40px;
+        margin: 0;
+        font-weight: 300;
+        font-size: 1.15em;
+        text-align: center;
+		
+		p {
+			margin: 0;
+			padding: 10px 0;
+		}	
+		ul {
+			margin: 0;
+			padding: 0 0 30px 20px;
+			
+			li {
+				padding: 5px 0;
+			}			
+		}	
+		.eip-subtitle {
+            font-size: 18px;
+            font-weight: 200;
+            padding: 10px 48px;
+        }
+        .eip-below-form {
+            font-size: 14px;
+            margin-top: 12px;
+
+            a {
+                letter-spacing: 0;
+                text-decoration: underline;
+            }
+        }
+        &:before {
+            position: absolute;
+            left: 31px;
+            top: 70px;
+        }
+        &.hide-pseudo:before {
+            content: none;
+        }        
+    }	
+}
+
+/* Effect: Fade in and scale up */
+.art-effect .art-content {
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.art-show.art-effect .art-content {
+    transform: scale(1);
+    opacity: 1;
+}
+@media only screen and (max-width: 799px) {
+    .art-modal {
+        width: 90%;
+        //height: 50%;
+        //transform: translateX(0%) translateY(-50%);
+        //left: auto;
+        font-size: rem-calc(13);
+
+        .frm_forms {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 7px;
+
+            button.frm_button_submit {
+                font-size: 18px;
+            }
+        }        
+    }
+    .art-content {
+        > div {
+
+            padding: 20px;
+
+            p {
+                font-size: rem-calc(13);
+            }            
+
+            &:before {
+                position: absolute;
+                left: 8px;
+                top: 35px;
+                content: ' ';
+                max-height: 100px;
+                width: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+            .eip-subtitle {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+            .eip-below-form {
+                font-size: 12px;
+            }            
+        }
+    }    
+	div.cell{margin-left:0;}
+/*    .art-overlay {    
+        display: none;
+    }*/
+    
+    .art-modal h2 {
+        font-size: 22px !important;
+    }   
+    
+    .art-modal img {    
+        //display: none;
+    }
+}

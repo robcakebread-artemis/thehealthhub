@@ -1,0 +1,165 @@
+.page-template-page-contact {
+    .entry-content {
+        padding-top: 0;
+
+        background: linear-gradient(to right, $color-1 0%, $color-1 50%, $grey-800 50%, $grey-800 100%);
+
+        .section-heading {
+            justify-content: flex-start;
+            h1 {
+                font-size: rem-calc(24);
+                color: $white;
+                border-bottom: $white;
+                margin: 0 0 2rem;
+                padding: 0;
+
+                &:after {
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding-right: 0;
+                }
+            }    
+        }
+        .grid {
+            &.main-content {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                display: flex;
+
+                .column {
+                    padding-top: 2rem;
+                    padding-bottom: 4rem;
+                    flex: 1;
+
+                    &:first-child {
+                        flex-basis: 65%;
+                        flex-grow: 0;
+                        padding-right: 2.55rem;
+                        box-sizing: border-box;
+
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-left: 2.5rem;
+                        box-sizing: border-box;
+                        h2 {
+                            text-align: center;
+                        }
+                    }
+
+                    &.contact-intro-john {
+                        padding: 0;
+                        box-sizing: border-box;
+                        flex: 1;
+                        p{
+                            text-align: center;
+                        }
+                    }
+                    &.contact-intro-text {
+                        box-sizing: border-box;
+                        flex: 3;
+                        h2 {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            h2{
+                font-size: 1.5rem;
+                color: $color-2;
+            }
+        }
+        ul.social-icons li a .icon {
+            color: $white;
+            font-size: rem-calc(35);
+        }
+    }
+
+    .contact-details-wrapper {
+        display: flex;
+        margin-bottom: 1rem;
+
+        .intro-icon .icon {
+            font-size: 1rem;
+            color: $color-3;
+            padding-right: 1rem;
+            padding-top: 0.25rem;
+        }
+
+        &.highlight {
+            .contact-detail {
+                font-size: 1rem;
+                align-items: center;
+            }
+        }
+
+        a {
+            color: $color-3;
+
+            &:hover {
+                color: darken($color-3, 20%);
+            }
+        }
+    }
+
+    .office-wrapper {
+        h3 {
+            font-size: rem-calc(18);
+            letter-spacing: 0.75px;
+            display: inline-block;
+            font-weight: 400;   
+        }
+
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .page-template-page-contact {
+        .entry-content {
+            background: $color-1;
+
+            .grid {
+                &.main-content {
+                    .column {
+                        &:last-child {
+                            margin-bottom: 2rem;
+                            padding: 1.5rem 1rem;
+                        }
+                        &:first-child {
+                            flex-basis: 100%;
+                            padding-right: 0;
+                            padding-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: map-get($gl-mq-list, 'sm') ) and (max-width: map-get($gl-mq-list, 'md')) {
+    .page-template-page-contact {
+        .entry-content {
+
+            .grid {
+                &.main-content {
+                    .column {
+                        &:last-child {
+                            display: flex;
+                            flex-flow: row wrap;
+
+                            .office-wrapper {
+                                flex-basis: 50%;
+                                max-width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

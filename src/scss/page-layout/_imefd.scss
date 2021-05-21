@@ -1,0 +1,20 @@
+.imefd-wrapper {
+    background: $color-3;
+
+    .testimonial-content-wrapper {   
+        .testimonial-content-inner {
+            background: none;
+        }
+        p {
+            font-size: 1.25rem;
+        }
+        .test-author {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            padding-bottom: rem-calc(10);
+        }
+    }
+}

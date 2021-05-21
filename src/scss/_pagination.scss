@@ -1,0 +1,23 @@
+.loadmore-wrapper {
+    flex-basis: 100%;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+#aws_pagination {
+    padding: 0 2rem;
+    text-align: center;
+    flex-basis: 100%;
+    padding-top: 1rem;
+}
+
+.page-numbers {
+    font-weight: 600;
+    font-size: rem-calc(16);
+    color: $grey-800;
+    margin: 0.25rem;
+
+    &.current {
+        color: $color-1;
+    }
+}

@@ -1,0 +1,48 @@
+.close {
+    display: flex;
+    position: absolute;
+
+    .cross {
+        width: rem-calc(18);
+        height: rem-calc(18);
+        display: inline-block;
+        right: rem-calc(30);
+        padding-left: rem-calc(12);
+        cursor: pointer;
+        margin-bottom: -3px;
+
+        &:after, &:before { 
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 2px;
+            outline: rem-calc(2) solid transparent;
+            right: 0;
+        }
+
+        &:before { 
+            transform: translateY(rem-calc(9)) rotateZ(-45deg); 
+            background: $body-font-color;
+            bottom: 16px;
+        }
+        
+        &:after { 
+            transform: translateY(- rem-calc(9)) rotateZ(45deg); 
+            background: $body-font-color;
+            bottom: -2px;
+        }    
+    }
+
+    &.white {
+        .cross {   
+            &:before { 
+                background: $white;
+            }
+            
+            &:after {                 
+                background: $white;
+            }    
+        }
+    }
+}

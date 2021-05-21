@@ -1,0 +1,198 @@
+.accordion {
+    width: 100%;
+
+    > dl {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &.two-col {
+            column-count: 2;
+            column-gap: 2rem;
+        }
+
+        &.no-toggle {
+            dt, dd {
+                padding-left: 0;
+            }
+        }
+
+        &.expanded {
+            dt {
+                padding-bottom: 0;
+                cursor: initial;
+            }
+        }
+
+        > dt {
+            break-inside: avoid-column;
+            position: relative;
+
+            &.column-break {
+                break-after: column;
+            }
+        }
+    }
+
+    .accordion-toggle {
+        cursor: pointer;
+        margin: 0;
+        padding: 0.5rem 2.125rem 0.5rem 1rem;
+        font-size: rem-calc(14);
+        color: $grey-800;
+        position: relative;
+        font-weight: 600;
+        background: $grey-200;
+        border: 1px solid $grey-300;
+        margin-bottom: 0.5rem;
+        border-radius: $default-radius;
+    }
+    .accordion-content {
+        font-size: rem-calc(14);
+        display: none;
+        padding: 0 1rem;	
+        //padding: 0;	
+        margin: 0 0 1rem;
+
+        &.default {
+            display: block;
+        }    
+
+        p {
+            font-size: rem-calc(14);
+        }
+    }    
+
+    &.style-1 {
+        >dl {
+            column-count: 1;
+        }
+
+        dt {
+            padding: 0 40px 0;
+            border-radius: $default-radius $default-radius 0 0;
+            margin-bottom: 1rem;
+
+            &.with-icon {
+                padding: 1.4rem 2.5rem 20px 4.5rem;
+                margin-bottom: 0;
+            }
+            .icon {
+                position: absolute;
+                left: rem-calc(20);
+                font-size: 2rem;
+                margin-top: 0;
+                top: rem-calc(17);
+            }
+            &.active {
+                //background: $blue;
+            }
+
+            a {
+                color: $white;
+                text-decoration: underline;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .accordion-content {
+            //background: $blue;
+            padding: 0.5rem 2.5rem 1px 4.5rem;
+            margin-bottom: 1rem;
+            border-radius: 0 0$default-radius $default-radius;
+        }
+
+        .accordion-toggle {
+            font-size: 1.25rem;
+            padding: 1rem 0 0.5rem;
+            border: 0;
+            color: $white;
+            font-weight: 600;
+        }
+    }
+
+    .arrow-wrapper {
+        background: none;
+        //background: $grey-200;
+        position: absolute;
+        top: rem-calc(8);
+        width: rem-calc(20);
+        height: rem-calc(20);
+        right: 1rem;
+        border-radius: 100%
+    }
+
+    button.arrow {
+        right: rem-calc(5);
+        position: absolute;
+        top: rem-calc(5);
+        font-size: 1.25rem;
+        color: $white;
+        background: none;
+        padding: 0;
+        outline: none;
+        box-shadow: none;
+        border: 0;
+    
+        &:hover, &:focus, &:active {
+            background: none;
+        }
+    
+        width: 10px;
+        height: 10px;
+    
+        &:before,
+        &:after{
+        }
+    
+        /* Vertical line */
+        &:before{
+            width: 2px;
+            margin-left: -1px;
+        }
+    
+        /* horizontal line */
+        &:after{
+            height: 2px;
+            margin-top: -1px;
+        }
+        
+        &.open{
+            &:before {
+                 transform: rotate(90deg); 
+            }
+            &:after { 
+                transform: rotate(180deg);
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) { 
+    .accordion {
+        > dl {
+            &.two-col {
+                column-count: 1;
+
+                dt.column-break {
+                    break-after: unset;
+                }
+    
+            }
+        }
+
+        .accordion-toggle {
+            font-size: 1rem;
+        }
+
+        &.style-1 {
+            .accordion-toggle {
+                font-size: 1.25rem;
+                padding: 1rem 0 0.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.jafwe-wrapper {
+    > .container {
+        padding-bottom: 3rem;
+    }
+    &.style1 {
+        background: #45609f;
+        color: $white;
+        text-align: center;
+        padding-bottom: 0;
+        margin-top: 2rem;
+        padding-top: 2rem;
+
+        h2 {
+            font-size: 2.5rem;
+            color: $white;
+            margin-bottom: 1rem;
+        }
+        .banner-subtitle {
+            font-family: $title-font;
+            font-size: 1.5rem;
+        }
+        .button {
+            font-size: rem-calc(24);
+            margin: 2rem 0 0;
+            padding: 0 1.5rem;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            border: 2px solid $white;;
+        }
+
+        .banner-footer-wrapper {
+            background: $color-1;
+            font-size: rem-calc(36);
+            font-family: $title-font;
+            height: 80px;
+            //display: grid;
+            display: flex;
+            align-items: center;
+            
+            a {
+                color: $color-3;
+            }
+        }
+    }
+}

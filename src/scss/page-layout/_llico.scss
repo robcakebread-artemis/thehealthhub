@@ -1,0 +1,68 @@
+.llico-wrapper {
+
+    .default-header {
+        .text {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .grid.bullet-wrapper {    
+        background: transparent;
+        margin: 0.5rem 0 0 0;
+        padding: 0;
+
+        .column {
+            max-width: calc(33.3333% - 2.688rem);
+            flex-basis: calc(33.3333% - 2.688rem);
+            align-items: center;
+            padding-bottom: rem-calc(50);
+            display: flex;
+            padding-right: 4rem;
+            box-sizing: content-box;
+
+            &:nth-child(3n) {
+                padding-right: 0;
+            }
+
+            .content {
+                a {
+                    color: $title-color;
+                    font-weight: 600;
+                    font-size: rem-calc(18);
+
+                    &:hover {
+                        color: $color-1;
+                    }
+                }
+            }
+
+            a:hover {
+                .title {
+                    color: $color-1;
+                }
+            }
+
+            .rs-icon-wrapper {
+                flex-shrink: 0;
+                margin-right: 1rem;
+
+                .icon {
+                    font-size: rem-calc(32);
+                    color: $color-1;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+    .llico-wrapper {
+        .grid.bullet-wrapper {
+            .column {
+                max-width: 100%;
+                flex-basis: 100%;
+                padding-right: 0;
+            }
+        }
+    }
+}

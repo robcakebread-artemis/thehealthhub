@@ -1,0 +1,37 @@
+.gallery-slider {
+    max-width: 500px;
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+    .slick-arrow {
+        border: 0;
+
+        &.slick-prev {
+            left: 0;
+        }
+        &.slick-next {
+            right: 0;
+        }
+
+    }
+}
+#slider-nav {
+    max-width: 500px;
+    
+    .slick-slide {
+        margin-right: 6px;
+    }
+    .slick-arrow {
+        border: 0;
+
+        &.slick-prev {
+            left: 0;
+        }
+        &.slick-next {
+            right: 0;
+        }        
+    }
+
+}

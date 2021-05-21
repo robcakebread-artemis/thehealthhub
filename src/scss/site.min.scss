@@ -1,0 +1,177 @@
+$gl-mq-list: (
+        lg: 99.938em, // 1599px
+        md: 64.938em, // 1023px
+        sm: 47.938em, // 767px
+        xs: 29.938em  // 479px
+) !default;
+$gl-mq-width: 'max-width' !default;
+
+/*****************************************************/
+// VARIABLES
+/*****************************************************/
+
+$content-width: 1170px;
+
+// Default Colours
+
+$black: #000;
+$white: #fff;
+$dark-gray: #18191b;
+$dark-grey: $dark-gray;
+$light-grey: #f5f5f6;
+$cool-grey: #f1f1f9;
+$medium-grey: #9aa4ad;
+$grey-500: #cbc9c9;
+$warning-color: #ff0000;
+$orange: #F0C14B;
+$price: #B12704;
+$green: #34A853;
+
+
+$grey-200: #efefef;
+
+//Pallette
+
+$color-1: #223959;
+$color-2: #2D4B76;
+$color-3: #FDF9F1;
+
+
+$grey-100: #f7f7f7;
+$grey-200: #e5e5e5;
+$grey-300: #cecece;
+$grey-400: #979797;
+$grey-500: #828282;
+$grey-600: #6b6b6b;
+$grey-700: #444444;
+$grey-800: #3d3d3d;
+$grey-900: #2c2c2c;
+
+$highlight-color: $color-3;
+
+// Defaults
+$default-radius: 5px;
+$border-color: $color-1;
+$text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+
+// Body
+$body-font:  'Open Sans', sans-serif;
+$body-font-color: $grey-800;
+$body-font-size: 16;
+$body-font-size-xs: 14;
+
+$title-color: $grey-700;
+$title-font:  'Open Sans', sans-serif;
+
+// Header
+$header-link-color: $grey-700;
+$header-background-color: $white;
+$hamburger-color: $grey-700;
+$top-bar-background-color: $grey-700;
+
+// Main Menu
+$menu-font-size: 1rem;
+$menu-font: $title-font;
+$menu-background: $white;
+$menu-font-color: $color-1;
+$menu-hover-color: $color-1;
+
+$menu-font-color-light: $white;
+$menu-hover-color-light: $white;
+
+// Footer 
+$footer-background-color: $grey-800;
+$footer-link-color: $white;
+$footer-font-color: $white;
+$footer-social-icons-color: $white;
+
+
+
+// Buttons
+$button-background-color: $color-3;
+$button-font-color : $white;
+
+// Social 
+$social-icons-color: $body-font-color;
+$social-icons-color-light: $color-1;
+
+// Slider
+$slider-font-color: $white;
+
+@import 'normalize';
+@import 'mixins';
+@import 'fonts';
+@import 'animations';
+
+
+@import 'defaults';
+@import 'visibility';
+@import 'styles';
+
+//@import 'fontawesome';
+
+// HEADER
+@import 'header/header';
+@import 'menu';
+@import 'off-canvas';
+@import 'hamburger';
+@import 'breadcrumbs';
+
+
+// Footer
+@import 'footer/footer';
+@import 'footer/footer-2';
+//@import 'footer/footer-bar';
+
+@import 'widgets';
+
+@import 'social';
+
+@import 'slider';
+@import 'slider-gallery';
+@import 'swiper';
+@import 'swiper-custom';
+@import 'icons';
+@import 'forms';
+@import 'pagination';
+//@import 'inputrange';
+
+// Page Layout Imports
+@import 'page-layout/nwgju';
+@import 'page-layout/bqsqi';
+@import 'page-layout/pnycl';
+@import 'page-layout/kqbhm';
+@import 'page-layout/imefd';
+@import 'page-layout/hytre';
+@import 'page-layout/jafwe';
+@import 'page-layout/tajqy';
+@import 'page-layout/pwaft';
+@import 'page-layout/gtrwb';
+@import 'page-layout/panwe';
+@import 'page-layout/jepsa';
+@import 'page-layout/sideb';
+@import 'page-layout/usopq';
+@import 'page-layout/llico';
+
+@import 'contact';
+@import 'testimonial';
+@import 'buttons';
+@import 'tooltip';
+@import 'accordion';
+@import 'cookie-consent';
+@import 'slider-buttons';
+@import 'popup';
+@import 'video';
+@import 'lightbox';
+@import 'controls';
+@import 'jqueryui';
+@import 'section-styles';
+@import 'lists';
+@import 'boxes';
+@import 'blog';
+@import 'single';
+
+
+// singles
+
+@import 'case-study';

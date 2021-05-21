@@ -1,0 +1,142 @@
+.usopq-wrapper {
+    //background: $color-1;
+
+    padding: rem-calc(50) 0;
+
+    > .container > .grid {
+        align-items: center;
+        justify-content: center;
+
+        &.two-col {
+            .column {
+                flex: 1;
+                max-width: 50%;
+                flex-basis: 50%;
+
+                &:last-child {
+                    flex: 0;
+                }
+            }
+        }
+    }
+
+    &.form-only {
+        > .container > .grid {
+            .column {
+                width: 60rem;
+                margin: 0 auto;
+            }
+        }
+    }    
+
+    .default-header {
+        width: 100%;
+
+        h2 {
+            font-size: rem-calc(22);
+            color: $color-2;
+        }
+
+        .text {
+            p {
+                font-size: 1rem;
+                padding-right: 3rem;
+            }
+
+        }
+    }
+
+    &.form-only {
+        .default-header {
+            width: 100%;
+
+            h2 {
+                text-align: center;
+                display: block;
+                border: 0;
+                margin-bottom: 2.5rem;
+                padding: 0;
+            }
+        }
+    }
+
+
+
+    .contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        a {
+            font-size: rem-calc(18);
+            color: $body-font-color;
+        }
+
+        .icon {
+            font-size: rem-calc(30);
+            color: $color-2;
+            margin-right: 1rem;
+        }
+
+    }
+
+    .link {
+        .button {
+            max-width: 300px;
+            width: 100%;
+            height: rem-calc(42);
+            font-size: rem-calc(19);
+            letter-spacing: 0.79px;
+            font-weight: 700;
+        }
+    }
+
+    .frm_forms.frm_style_formidable-style.with_frm_style {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+    .usopq-wrapper {
+        .contact {
+            a {
+                font-size: 1.5rem;
+            }
+            .icon {
+                font-size: 2rem;
+            }
+        }
+
+        > .container > .grid {
+    
+            &.two-col {
+                .column {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
+            }
+        }
+        .default-header {
+            margin-bottom: 2rem;
+
+            .text {
+                p {
+                    font-size: 0.875rem;
+                    padding-right: 0;
+                }
+    
+            }
+        }    
+        .contact {
+            a {
+                font-size: 1rem;
+            }
+        }    
+        .link {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+}

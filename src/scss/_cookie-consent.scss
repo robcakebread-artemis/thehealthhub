@@ -1,0 +1,33 @@
+.aws-cookie-consent {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 350px;
+    background: $color-2;
+    color: $white;
+    z-index: 99999999999;
+    border-radius: $default-radius;
+    display: none;
+
+    .aws-cookie-text-wrapper {
+        padding: 1.5rem 2rem;
+    }
+
+    button {
+        margin: 0 auto;
+        display: block;
+        background: $color-1;
+        padding: 0.75rem 2rem;
+        color: $body-font-color;
+        
+        &:hover {
+            background: lighten($color-1, 10%);
+        }        
+    }
+
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+
+}
