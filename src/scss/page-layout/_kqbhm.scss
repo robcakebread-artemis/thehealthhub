@@ -110,15 +110,9 @@
             margin-bottom: 2rem;
 
             .column {
-                flex: 1;
-                
-                &:first-child {
-                    padding: 0 0.5rem 0 1rem;
-                }
-                
-                &:last-child {
-                    padding: 0 1rem 0 0.5rem;
-                }
+                flex-grow: 1;
+                width: 30%;
+                padding: 0 0.5rem;
 
                 @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
                     flex-basis: 100%;
@@ -127,15 +121,17 @@
             }
     
             .icon-link-wrapper {
+                background: $grey-100;
+                margin-bottom: 1.5rem;
                 div.icon-title {
                     h3.secondary-title {
-                        font-size: 1.5rem;
-                        padding-left: 0;
-                        text-align: left;
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        padding: 0;
                     }
                 }
                 div.icon-link-text{
-                    padding-left: 0;
+                    padding: 1rem;
                     text-align: left;
                 }
                 &.full-width.overlay {
@@ -160,10 +156,6 @@
         .grid.style2 {
             .column {
                 padding: 0 1rem;
-
-                &:first-child, &:last-child {
-                    padding: 0 1rem;
-                }
             }
 
             .icon-link-wrapper.full-width {
@@ -179,7 +171,7 @@
                         max-width: 100%;
 
                         h3.secondary-title {
-                            font-size: rem-calc(26);
+                            font-size: rem-calc(20);
                             padding: 0;
                         }
                     }
@@ -202,7 +194,7 @@
                 &.overlay {
                     div.icon-title {
                         h3.secondary-title {
-                            font-size: rem-calc(26);
+                            font-size: rem-calc(20);
                         }
                     }
                 }
@@ -213,7 +205,7 @@
                 &.overlay {
                     div.icon-title {
                         h3.secondary-title {
-                            font-size: rem-calc(26);
+                            font-size: rem-calc(20);
                         }
                     }
                 }
@@ -233,14 +225,7 @@
             &.style3 {
                 .column {
                     flex-basis: 100%;
-                    
-                    &:first-child {
-                        padding: 0;
-                    }
-                    
-                    &:last-child {
-                        padding: 0;
-                    }
+                    padding: 0;
                
                 }
     

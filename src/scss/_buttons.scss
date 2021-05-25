@@ -1,6 +1,7 @@
 .button, button {
-    height: rem-calc(52px);
-    padding: 1rem 2rem;
+    height: rem-calc(44px);
+    padding: 1rem;
+    margin-top: 1rem;
     background: $button-background-color;
     color: $button-font-color;
     font-size: rem-calc(14);
@@ -9,7 +10,7 @@
     transition: all 0.3s;
     border: 0;
     font-weight: 600;
-    //text-transform: uppercase;
+    text-transform: uppercase;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -210,6 +211,7 @@ button.arrow {
 }
 @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
     button, .button, .button.plain {
+        margin-top: 1rem;
         font-size: rem-calc(14);
     }
 }

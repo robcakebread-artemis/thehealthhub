@@ -25,7 +25,7 @@ endif;
 if ($full_width_images):
     
     if ((int)$max > 2):
-        $image_size = 'gallery-thumb-square';
+        $image_size = 'full-width';
     else:
         $image_size = 'full';
     endif;
@@ -54,65 +54,30 @@ if( have_rows('iconimage_blocks') ):
 <?php
     while ( have_rows('iconimage_blocks') ) : the_row();
         $image = '';
-        if ($imagetype == 'Icons'): 
-            $icon = get_sub_field('fa_code'); 
-            if ( $icon == 'adviceicon' ):
-               $image = '<img src="/wp-content/themes/equityreleasesussex/img/advice-icon.svg" width="50" alt="advice">';
-            elseif ( $icon == 'applyicon'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/apply-icon.svg" width="50" alt="apply">';
-            elseif ( $icon == 'completeicon'   ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/complete-icon.svg" width="50" alt="complete">';
-            elseif ( $icon == 'legalicon'   ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/legal-icon.svg" width="50" alt="legal">';
-            elseif ( $icon == 'searchicon'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/search-icon.svg" width="50" alt="search">';
-            elseif ( $icon == 'casestudies1'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/case-studies-1.svg" width="50" alt="Lock">';
-            elseif ( $icon == 'casestudies2'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/case-studies-2.svg" width="50" alt="Wallet">';
-            elseif ( $icon == 'casestudies3'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/case-studies-3.svg" width="50" alt="Money">';
-            elseif ( $icon == 'useitfor1'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/use-it-for-1.svg" width="50" alt="House">';
-            elseif ( $icon == 'useitfor2'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/use-it-for-2.svg" width="50" alt="Lock2">';
-            elseif ( $icon == 'useitfor3'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/use-it-for-3.svg" width="50" alt="Plane">';
-            elseif ( $icon == 'signpost'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/choices-later-life.svg" width="50" alt="Signpost">';
-            elseif ( $icon == 'van'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/market-later-life.svg" width="50" alt="Van">';
-            elseif ( $icon == 'peopletick'  ):
-                 $image = '<img src="/wp-content/themes/equityreleasesussex/img/Stress-free-later-life.svg" width="50" alt="People Tick">';
-            elseif ( $icon == 'mappin'  ):
-                 $image = get_icon('location');
-            endif; 
-        else: 
-            $image = get_sub_field('icon_image');
-            if ($image): ?>
-                <div class="icon-image">
-                 <?php $image = wp_get_attachment_image( $image, $image_size ); ?>
-                </div>
-           <?php endif;
-        endif;
+        $image = get_sub_field('icon_image');
+        if ($image): ?>
+            <?php $image = wp_get_attachment_image( $image, $image_size ); ?>
+        <?php endif;
 
         $link = get_sub_field('icon_link_title');
 
         $icon_text = get_sub_field('icon_text');
 ?>
         <div class="aligncenter column">
-            <div class="icon-link-wrapper">
+            <div class="icon-link-wrapper <?= ($classes ? ' '.$classes : ''); ?>">
                 <?php if ($link['url'] != '#'): ?>
                     <a href="<?= $link['url']; ?>" aria-label="<?= $link['title']; ?>">
                 <?php endif; ?>
                 <?php if ($image): ?>
-                <?= $image; ?>                                            
+                <div class="icon-image">
+                    <?= $image; ?>         
+                </div>                                   
                 <div class="icon-title">
                     <h3 class="secondary-title">
                         <?= $link['title']; ?>
                     </h3>
                     <?php if ($style == 'style21'): ?>
-                        <a href="<?= $link['url']; ?>" class="button wireframe white">Read More</a>
+                        <a href="<?= $link['url']; ?>" class="button wireframe white">LEARN MORE <?= get_icon('arrow right'); ?></a>
                     <?php endif; ?>                        
                 </div>    
                 <?php endif; ?>
@@ -123,7 +88,7 @@ if( have_rows('iconimage_blocks') ):
                     <div class="icon-link-text"><?= $icon_text; ?>
                         <?php if ($link['url'] != '#'): 
                             if ($imagetype == 'Images'): ?>
-                            <p><a href="<?= $link['url']; ?>" aria-label="<?= $link['title']; ?>">Read more</a></p>
+                            <p><a href="<?= $link['url']; ?>" aria-label="<?= $link['title']; ?>">LEARN MORE <?= get_icon('arrow right'); ?></a></p>
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>

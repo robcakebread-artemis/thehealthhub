@@ -89,7 +89,7 @@ if( have_rows('slides') ):
                                     <div class="slide-content">
 
                                         <?php if ($slide_title) : ?>
-                                            <div class="slider-title"><h1><?= $slide_title; ?></h1></div>
+                                            <div class="slider-title"><h2><?= $slide_title; ?></h2></div>
                                         <?php endif; ?>
                                         <?php if ($slide_text) : ?>
                                             <div class="slider-text"><?= $slide_text; ?></div>
@@ -126,51 +126,6 @@ if( have_rows('slides') ):
 
                                 <?php include(locate_template('template-parts/partials/partial-google-map.php')); ?>
                             </div>
-                        </div>
-                        <?php elseif($slide_type == 'Form'):                        
-                        $slide_type = get_sub_field('slide_type');
-                        $slide_title = get_sub_field('slide_title');
-                        $slide_text = get_sub_field('slide_text');
-                        $slide_image = get_sub_field('slide_image');
-                        $slide_link = get_sub_field('slide_link');
-                        $custom_class = get_sub_field('slide_custom_class');
-                        $form = get_sub_field('form_shortcode');
-                        ?>
-
-                        <div class="single-slide<?= ($custom_class ? ' '.$custom_class : ''); ?>" <?= ($cnt == 0 ? ' aria-hidden="true"' : '');?>>
-                            <div class="slide-image">
-                                <?= wp_get_attachment_image( $slide_image['id'], $thumb_size, '', array( "class" => (($slide_type == 'image') ? 'opaque' : '') ) ); ?>
-                                <div class="slide-overlay"></div>
-                            </div>
-                            <?php if ($slide_title || $slide_text): ?>
-                            <div class="slide-content-wrapper">         
-                                <div class="slide-content-inner">         
-                                    <div class="slide-content">
-                                        <div class="grid">
-                                            <div class="column">
-                                                <?php if ($slide_title) : ?>
-                                                <div class="slider-title">
-                                                    <h1><?= $slide_title; ?></h1>
-                                                </div>
-                                                <?php endif; ?>
-                                                <?php if ($slide_text) : ?>
-                                                    <div class="slider-text"><?= $slide_text; ?></div>
-                                                <?php endif; ?>
-                                                <?php if( $slide_link ): ?>
-                                                    <div class="slider-cta"><a href="<?= $slide_link['url'];?>" class="cta-button button"><span><?= $slide_link['title']; ?></span> <?= get_icon('arrow right'); ?></a></div>
-                                                <?php endif; ?>
-                                                <div class="reviews">
-                                                    <?= get_icon('star'); ?><?= get_icon('star'); ?><?= get_icon('star'); ?><?= get_icon('star'); ?><?= get_icon('star'); ?><br class="visible-mobile"> <a href="/testimonials/">See our 5 star reviews</a>
-                                                </div> 
-                                            </div>
-                                            <div class="column hero-form">
-                                                <?php echo do_shortcode($form); ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
 

@@ -34,13 +34,13 @@ header {
 
 
 #header {
-
+    font-family: $title-font;
     #logo {
         padding: 0 3rem 0 0;
 
         img {
             width: 100%;
-            max-width: 300px;
+            max-width: 400px;
         }
     }
     .site-branding-inner {
@@ -100,7 +100,7 @@ header {
                 align-items: center;
                 margin-bottom: rem-calc(4);
                 font-weight: 700;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 color: $color-1;
 
                 a {
@@ -115,8 +115,8 @@ header {
                 }
                 
                 .icon {
-                    font-size: rem-calc(20);
-                    padding: 0.5rem 0.5rem 0;
+                    font-size: rem-calc(18);
+                    padding: 0 0.5rem 0;
                     color: $color-2;
                 }
             }
@@ -211,6 +211,7 @@ header {
                     
                     .icon {
                         color: $color-1 !important;
+                        padding: 0.5rem 0.5rem 0;
                     }
                 }
             }

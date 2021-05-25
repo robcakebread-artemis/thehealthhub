@@ -216,7 +216,8 @@ function aws_custom_scripts() {
     wp_enqueue_style( 'aws-custom-style', get_stylesheet_directory_uri() . '/css/site.min.css', false,  filemtime(get_stylesheet_directory() . '/css/site.min.css')); 
 	
     wp_enqueue_script( 'aws-custom-init-js', get_template_directory_uri() . '/js/site.min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/site.min.js'), true );	    
-
+	/* Add Slick JS */
+	wp_enqueue_script( 'aqblinds-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1', true );	
     //wp_enqueue_script( 'multirange', get_template_directory_uri() . '/js/multirange.js', array(), filemtime(get_stylesheet_directory() . '/js/multirange.js'), true );	   
 
     if (!is_admin()) :

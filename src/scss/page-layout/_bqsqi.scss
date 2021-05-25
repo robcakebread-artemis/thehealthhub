@@ -24,30 +24,6 @@
         }
     }
 
-    &.john-whyte{
-        .grid {
-            .column {
-                padding: 0 1rem;
-                flex: 4;
-
-                &:first-child {
-                    padding-left: 0;
-                    flex: 1;
-                }
-                &:last-child {
-                    padding-right: 0;
-                    flex: 1;
-                    align-self: flex-end;
-                    padding-bottom: 2rem;
-                }
-
-                @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
-                    flex-basis: 100%;
-                }
-            }
-        }
-    }
-
     &.three-one{
         .grid {
             .column {
@@ -61,42 +37,6 @@
                 &:last-child {
                     padding-right: 0;
                     align-self: flex-end;
-                }
-
-                @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
-                    flex-basis: 100%;
-                }
-            }
-        }
-    }
-
-    &.about-me{
-        .grid {
-            .column {
-                padding: 0 1rem;
-
-                &:first-child {
-                    padding-left: 0;
-                    flex: 1;
-                }
-                &:last-child {
-                    padding-right: 0;
-                    flex: 2;
-                    align-self: flex-end;
-                    padding-bottom: 2rem;
-                }
-
-                .inner-text{
-                    p{
-                       i{
-                            color: $color-3;
-                            font-size: 1.2rem;
-                        } 
-                    }
-                }
-
-                h2{
-                    display: block;
                 }
 
                 @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
@@ -141,7 +81,10 @@
 
             .inner-text{
                 .button{
-                    background-color: $color-2;
+                    background-color: $button-background-color;
+                    &:hover{
+                        background: darken($button-background-color, 10%);
+                    }
                 }
             }
         }

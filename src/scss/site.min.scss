@@ -34,7 +34,7 @@ $grey-200: #efefef;
 
 $color-1: #223959;
 $color-2: #2D4B76;
-$color-3: #FDF9F1;
+$color-3: #f7f7f7;
 
 
 $grey-100: #f7f7f7;
@@ -50,7 +50,7 @@ $grey-900: #2c2c2c;
 $highlight-color: $color-3;
 
 // Defaults
-$default-radius: 5px;
+$default-radius: 2px;
 $border-color: $color-1;
 $text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 
@@ -61,7 +61,7 @@ $body-font-size: 16;
 $body-font-size-xs: 14;
 
 $title-color: $grey-700;
-$title-font:  'Open Sans', sans-serif;
+$title-font:  'Modena';
 
 // Header
 $header-link-color: $grey-700;
@@ -70,7 +70,7 @@ $hamburger-color: $grey-700;
 $top-bar-background-color: $grey-700;
 
 // Main Menu
-$menu-font-size: 1rem;
+$menu-font-size: 0.75rem;
 $menu-font: $title-font;
 $menu-background: $white;
 $menu-font-color: $color-1;
@@ -88,7 +88,7 @@ $footer-social-icons-color: $white;
 
 
 // Buttons
-$button-background-color: $color-3;
+$button-background-color: $color-1;
 $button-font-color : $white;
 
 // Social 
@@ -152,6 +152,7 @@ $slider-font-color: $white;
 @import 'page-layout/sideb';
 @import 'page-layout/usopq';
 @import 'page-layout/llico';
+@import 'page-layout/team';
 
 @import 'contact';
 @import 'testimonial';

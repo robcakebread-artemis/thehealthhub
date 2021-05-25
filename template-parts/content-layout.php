@@ -116,7 +116,13 @@ if( have_rows('layout', $pid) ):
 		/***********************************/
 		elseif( get_row_layout() == 'llico' ):
             include(locate_template('template-parts/page-layout/layout_llico.php'));   
-            $prev_layout = 'llico';       
+            $prev_layout = 'llico';   
+		/***********************************/
+		/* Add Team Slider     */
+		/***********************************/
+		elseif( get_row_layout() == 'team' ):
+            include(locate_template('template-parts/page-layout/layout_team.php'));   
+            $prev_layout = 'team';     
 		/***********************************/
 		/* Add Title Break                 */
 		/***********************************/

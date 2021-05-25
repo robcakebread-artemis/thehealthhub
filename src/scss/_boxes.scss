@@ -4,7 +4,7 @@
     width: 100%;
 
     .icon-image {    
-        height: 300px !important;   
+        height: 100% !important;   
         > a {
             color: $color-1;       
             height: 100%;
@@ -13,6 +13,7 @@
         }
         img {
             transition: all ease-in-out 300ms;
+            filter: brightness(70%);
             &:hover {
                 //transform: scale(1.1);
             }
@@ -41,14 +42,16 @@
         }
     }
     &.full-width {
-
+        
         .icon-image {
             position: relative;
             box-sizing: border-box;
-
-            &:hover {
-                transition: all .35s ease-in-out;
-                border-color: $color-1;
+            overflow: hidden;
+            img{
+                &:hover {
+                    transition: transform 2s ease;
+                    transform: scale(1.2);
+                }
             }
         }
 
@@ -57,6 +60,7 @@
             height: 100%;
             object-fit: cover;
             margin-bottom: -5px;
+
         }
 
         &.overlay {
@@ -69,10 +73,9 @@
                 background: none;
                 padding: 0;
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50%, -50%);                    
+                top: 27%;
+                left: 0;
+                margin-right: 0;                  
 
                 h3.secondary-title {
                     font-size: 2rem;
@@ -80,6 +83,7 @@
                     margin: 0;
                     color: $white;
                     letter-spacing: 1.07px;
+                    text-align: center;
 
                     a {
                         color: $white;

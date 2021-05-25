@@ -50,7 +50,7 @@
                         $link = get_sub_field('link');
                         if ($link): ?>
                             <div class="link">
-                                <a href="<?= $link['url']; ?>" class="button"><?= $link['title']; ?></a>
+                                <a href="<?= $link['url']; ?>" class="button"><?= $link['title']; ?><?= get_icon('arrow right'); ?></a>
                             </div>
                         <?php endif; ?>
                     </div>  

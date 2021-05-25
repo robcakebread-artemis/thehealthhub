@@ -18,7 +18,7 @@
                 </div>
                 <div class="column mob aligncenter-mob">
                     <div id="logo">
-                        <a href="/" title="Squarepoint Logo"><img src="<?= get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="Squarepoint Logo"/></a>
+                        <a href="/" title="The Health Hub Logo"><img src="<?= get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="The Health Hub Logo"/></a>
                     </div>
                     <div id="header-right">
                         <div class="contact-details">

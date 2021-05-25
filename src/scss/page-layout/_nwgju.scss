@@ -134,8 +134,8 @@
             .slide-content {
 
                 h1, h2 {
-                    font-size: rem-calc(48);
-                    line-height: rem-calc(72);
+                    font-size: rem-calc(24);
+                    line-height: rem-calc(36);
                     color: $slider-font-color;
                     margin: 0;
                     letter-spacing: 0.5px;
@@ -148,7 +148,7 @@
 
 
                     p {
-                        font-size: rem-calc(22);
+                        font-size: rem-calc(18);
                         //text-shadow: $text-shadow;
                         color: $slider-font-color;
                         line-height: rem-calc(30);
@@ -161,9 +161,11 @@
                 }
                 .slider-cta{
                     padding-top: 0.5rem;
+                    text-align: right;
                 }
                 .button {
                     font-size: 1rem !important;
+                    margin-top: 0;
                 }                
             }
         }   
@@ -233,6 +235,9 @@
 
             .slide-content{
                 width: 50%;
+                background: $color-1;
+                opacity: 0.85;
+                padding: 1rem;
 
                 .slider-text{
                     p{
@@ -270,7 +275,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(51 51 51 / 25%);
 }
 
 .gradient-left .slide-overlay {
@@ -441,7 +445,7 @@
             position: relative;
 
             .slide-image {
-                height: 100% !important;
+                height: 100%;
         
                 img {
                     object-fit: cover;
@@ -465,8 +469,8 @@
                 .slide-content {
 
                     h1, h2 {
-                        font-size: rem-calc(36);
-                        line-height: rem-calc(48);
+                        font-size: rem-calc(24);
+                        line-height: rem-calc(32);
                         color: $slider-font-color;
                         margin-bottom: 1rem;
                         letter-spacing: 0.5px;
@@ -520,8 +524,8 @@
 
                 .slide-content {
                     h3, h2 {
-                        font-size: 3.5rem;
-                        line-height: 4rem;
+                        font-size: 1.5rem;
+                        line-height: 2.5rem;
                     }
                     .slider-text, .slider-text p {
                         font-size: rem-calc(20);
@@ -542,7 +546,7 @@
             .slide-content-wrapper {
 
                 .slide-content{
-                    width: 100%;
+                    width: 80%;
 
                     .slider-text{
                         p{
@@ -568,7 +572,7 @@
     .hero-slider {
         .single-slide {
             .slide-image {
-                height: calc(100vh - 131px) !important;
+                height: 350px;
             }
             .slide-content-wrapper {
                 //margin: auto;
@@ -580,7 +584,7 @@
 
                 .slide-content {
                     h3, h2 {
-                        font-size: rem-calc(36);
+                        font-size: rem-calc(24);
                         line-height: 130%;
                         color: $white;
                         margin-bottom: 0.5rem;
@@ -655,14 +659,10 @@
 @media screen and (max-width: map-get($gl-mq-list, 'xs') ) {
     .hero-slider {
         .single-slide {
-            .slide-image {
-                //height: 12rem;
-                height: 250px;
-            }
             .slide-content-wrapper {
                 .slide-content {
                     h1 {
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         line-height: 2.5rem;
                         margin-bottom: 1rem;
                     }

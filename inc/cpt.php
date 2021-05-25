@@ -49,6 +49,23 @@ function aws_register_cpt() {
 		)
     );	   
 
+	register_post_type( 'team',
+	// CPT Options
+		array(
+            'labels' => get_cpt_labels('Team', 'Team Members', 'team'),
+			'public' => true,
+			'publicly_queryable'  => false,
+			'has_archive' => false,
+			'query_var' => true,
+			'hierarchical'  => false,	
+			'taxonomies' => array( 'teamcategory' ),
+			'menu_icon'  => 'dashicons-admin-users',
+            'menu_position'         => 30,
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields'),
+            'rewrite' => array('with_front' => false),
+		)
+	);
+
 	// create Accordion
 
 	$args = array(
