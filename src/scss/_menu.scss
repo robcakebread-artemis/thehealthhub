@@ -99,7 +99,6 @@
 
             > li > .sub-menu {
                 top: 100%;
-                //margin-top: 20px;
 
                 li > a:after {
                     margin-top: 0;
@@ -108,6 +107,12 @@
 
                 a {
                     color: $body-font-color;
+                    font-family: $body-font;
+                    font-size: 1rem;
+                    font-weight: normal;
+                    &:after{
+                        display: none;
+                    }
                 }
             }
             
@@ -357,6 +362,7 @@
         }
     }
 }
+
 
 @media screen and (max-width: map-get($gl-mq-list, 'md') ) {
     .desktop-menu{

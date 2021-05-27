@@ -12,7 +12,6 @@
 
             <section class="post-wrapper">
                 <div class="container">
-                    <div class="grid">
                     <?php
                         $cnt = 0;
                         if ( have_posts() ):
@@ -34,8 +33,7 @@
                             page_template = 'blog';
                         </script> 
                         <?php aws_paginator( get_pagenum_link() ); ?>
-                    </div>
-                </div>	
+                    </div>	
             </section>
             <?php include(locate_template('template-parts/partials/partial-footer-components.php')); ?>
 		</main>

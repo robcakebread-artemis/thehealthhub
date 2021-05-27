@@ -90,8 +90,11 @@
 .art-side-form h3 {
 	color:#0a2032;
 	margin-bottom:10px;
-	font-weight:800;
-	font-size: 1.5rem;
+	font-size: 1rem;
+}
+
+.art-side-form p {
+	margin-bottom: 0;
 }
 
 .art-side-form .frm_forms .frm_message {
@@ -148,7 +151,7 @@
 
 .art-side-form .gform_wrapper .gfield_label {
 	font-size: 0.9rem;
-	visibility: hidden;
+	display: none;
 }
 
 .art-side-form .gform_wrapper .field_sublabel_hidden_label {

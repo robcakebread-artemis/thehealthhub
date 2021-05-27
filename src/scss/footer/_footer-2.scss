@@ -3,11 +3,12 @@
 
     #copyright {
         text-align: center;
-        margin-top: 1rem;
+        padding: 0.5rem 0;
+        background: $white;
+        color: $color-1;
 
         .container {
             padding: 0.75rem 0;
-            border-top: 1px solid $grey-700;;
         }
 
         .site-info {

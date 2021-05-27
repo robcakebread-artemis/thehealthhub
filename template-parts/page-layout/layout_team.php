@@ -9,7 +9,8 @@ $id = get_sub_field('id');
 $args = array(
     'post_type' => 'team',
     'orderby'	=> 'date',
-    'order'		=> 'ASC'		
+    'order'		=> 'ASC',
+    'posts_per_page' => -1	
     //''
 );	
 //set up custom query
@@ -44,7 +45,15 @@ $aws_query = new WP_Query($args); ?>
             wp_reset_query();
         endif; ?>
         </div>
-
+        <div class="grid">
+            <div class="column column-link ">
+            <?php $link = get_sub_field('link');
+                if ($link): ?>
+                    <div class="link text-center">
+                        <a href="<?= $link['url']; ?>" class="button"><?= $link['title']; ?><?= get_icon('arrow right'); ?></a>
+                    </div>
+                <?php endif; ?>
+            </div>
     </div>
 </section>
 

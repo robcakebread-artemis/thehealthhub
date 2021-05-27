@@ -232,6 +232,12 @@ body {
     box-sizing: border-box;   
 }
 
+.w-80{
+    max-width: 80%;
+    @media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+        max-width: 100%;
+    }
+}
 
 .no-hero {
     .breadcrumb-wrapper {

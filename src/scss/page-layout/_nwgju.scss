@@ -246,7 +246,31 @@
                     
                 }
             }
-        }        
+        }       
+        &.therapies-hero{
+
+            .slide-image{
+                img{
+                    filter: brightness(70%);
+                }
+            }
+            .slide-content-wrapper {
+    
+                .slide-content{
+                    background: none;
+                    opacity: initial;
+                    text-align: center;
+                    margin: 0 auto;
+    
+                    .slider-text{
+                        p{
+                           font-weight: 400 !important; 
+                        }
+                        
+                    }
+                }
+            } 
+        } 
     }    
 }
 .hero-slider.slider-type-3 {

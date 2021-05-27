@@ -13,54 +13,156 @@
                 color: $body-font-color;
         
                 &.current {
-                    color: $color-3;
+                    color: $color-2;
                 }
             }
 
             .container{
 
                 .grid {
-                    display: flex;
                     flex-flow: row wrap;
+                    margin-bottom: 0;
+                    padding: 1rem 0;
+                    border-bottom: 0.5px solid $color-1;
 
+                    &:first-child{
+                        border-top: 0.5px solid $color-1;
+                    }
+                    
+            
                     .column {
-                        flex: 1;
-                        flex-basis: 30%;
-                        padding: 0 1rem;
-                        max-width: 30%;
-                        margin-bottom: 2rem;
+                        flex-grow: 1;
+                        padding: 1rem 0.5rem;
 
-                        @media screen and (max-width: map-get($gl-mq-list, 'md')) {
-                            flex-basis: 100% !important;
-                            max-width: none;
+                        &.column-thumb{
+                            width: 30%;
+                            max-width: 30%; 
                         }
 
-                        .latest-blog-thumb{
-                            position: relative;
-                            box-sizing: border-box;
-                            height: 350px;
-                            overflow: hidden;
-
-                            &:hover img{
-                                transition: transform 2s ease;
-                                transform: scale(1.2);
-                            }
-
-                            img{
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                            }
+                        &.column-content{
+                            width: 60%;
+                        }
+            
+                        @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+                            flex-basis: 100%;
+                            margin-bottom: 1rem;
+                            max-width: 100%;
                         }
                         .latest-blog-overlay{
-                            background: $color-2;
-
-                            .latest-blog-content{
-                                position: absolute;
-                                top: 75%;
-                                h3{
-                                    color: $white;
+            
+                            .latest-blog-thumb{
+                                overflow: hidden;
+                                a img:hover{
+                                    transition: transform 2s ease;
+                                    transform: scale(1.2);
                                 }
+                            }
+            
+                            .latest-blog-content{
+                                padding: 1rem;
+                                .latest-blog-title{
+                                    a h3{
+                                        color: $color-1;
+                                        font-size: 0.75rem;
+                                    }
+                                }
+                            }
+                            .latest-blog-read{
+                                padding: 1rem;
+                            }
+                        }                
+                    }
+            
+                    .icon-link-wrapper {
+                        background: $grey-100;
+                        margin-bottom: 1.5rem;
+                        div.icon-title {
+                            h3.secondary-title {
+                                font-size: 1.25rem;
+                                font-weight: 500;
+                                padding: 0;
+                            }
+                        }
+                        div.icon-link-text{
+                            padding: 1rem;
+                            text-align: left;
+                        }
+                        &.full-width.overlay {
+                            .icon-link-text {
+                                padding: 1rem;
+                            }
+                            .button {
+                                margin-top: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .blog {
+        .post-archive {
+            .post-wrapper {
+                padding: 2rem 0;
+                .container {
+                    .grid {
+                        &.single {
+                            grid-template-columns: 100% !important;
+                        }
+                        .column {
+                            padding: 1rem 0.5rem;
+
+                            &.column-content{
+                                padding: 0 0.5rem;
+                            }
+
+                            .latest-blog-overlay{
+                                .latest-blog-content{
+                                    padding: 0.5rem;
+                                    font-size: 0.95rem;
+                                    .latest-blog-title{
+                                        a h3{
+                                            color: $color-1;
+                                            font-size: 0.7rem;
+                                        }
+                                    }
+                                }
+                                .latest-blog-read{
+                                    padding: 0.5rem;
+                                    .button{
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+    .blog {
+        .post-archive {
+            .post-wrapper {
+                .container {
+                    .grid {
+                        .column {
+                            padding: 1rem 0.5rem;
+
+                            &.column-thumb{
+                                flex-basis: 100%;
+                                max-width: 100%; 
+                            }
+
+                            &.column-content{
+                                flex-basis: 100%;
+                                margin-bottom: 1rem;
+                                max-width: 100%;
                             }
                         }
                     }

@@ -131,3 +131,17 @@
         }
     }
 }
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+    .hytre-wrapper {
+        .grid {
+            .column {
+                .latest-blog-overlay{
+                    .latest-blog-content{
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

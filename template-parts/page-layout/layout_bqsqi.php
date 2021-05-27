@@ -1,6 +1,7 @@
 <?php
     $id = get_sub_field('id');
     $classes = get_sub_field('additional_classes'); 
+    $container_classes = get_sub_field('container_classes'); 
     $fullwidth = get_sub_field('full_width');
     $style = get_sub_field('column_style');
     $col_width = '';
@@ -34,7 +35,7 @@
 ?>
 
 <section class="bqsqi-wrapper section <?= ($classes ? ' '.$classes : ''); ?>"<?= ($id ? ' id="'.$id.'"' : ''); ?>>
-    <div class="container<?= ($fullwidth ? '-full-width' : ''); ?>">
+    <div class="container<?= ($container_classes ? ' '.$container_classes : ''); ?><?= ($fullwidth ? '-full-width' : ''); ?>">
         <div class="content-wrapper">
                                 <?= $header; ?>
 
@@ -48,8 +49,9 @@
                     <div class="inner-text">
                         <?= get_sub_field('column_content'); 
                         $link = get_sub_field('link');
+                        $link_class = get_sub_field('link_class');
                         if ($link): ?>
-                            <div class="link">
+                            <div class="link<?= ($link_class ? ' '.$link_class : ''); ?>">
                                 <a href="<?= $link['url']; ?>" class="button"><?= $link['title']; ?><?= get_icon('arrow right'); ?></a>
                             </div>
                         <?php endif; ?>
