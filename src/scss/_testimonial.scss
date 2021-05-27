@@ -48,19 +48,30 @@
                 bottom: -14px;
                 left: 73px;
             }*/
+
+            .testimonial-meta {
+                margin-top: 0;
+                padding: 0;
+                .test-author{
+                    color: $color-1;
+                    font-weight: bold;
+                    .star-wrapper-slider {
+                        color: #E3B419;
+                        font-size: 1.5rem;
+                        padding: 0.5rem 0;
+                        text-align: center;
+                    }
+                }
+                
+            }
         }
 
         .testimonial-meta {
-            margin-top: rem-calc(36);
-            padding-left: rem-calc(80);
 
             .test-author {
                 color: $title-color;
-                font-size: rem-calc(36);
-                text-align: center;
-            }
-            .test-company {
-                font-size: rem-calc(14);
+                font-size: rem-calc(18);
+                text-align: left;
             }
         }
     }
@@ -95,15 +106,15 @@
     }
     .test-quote {
         color: $color-2;
-        font-size: rem-calc(38);
+        font-size: rem-calc(24);
         position: absolute;
         left: rem-calc(26);
-        top: rem-calc(20);
+        top: 2rem;
     
         &.after {
             left: auto;
             right: -1.75rem;
-            bottom: 1.25rem;
+            bottom: 3.25rem;
             top: auto;
             transform: rotate(180deg);
         }

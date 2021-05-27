@@ -10,16 +10,22 @@ endif;
         $pid = $recent["ID"];
 	?>
 	<div class="column">
-		<a href="<?= get_permalink($pid); ?>" aria-label="Read More about <?= $recent['post_title']; ?>">
-			<div class="latest-blog-thumb show-for-large">
+	<div class="latest-blog-overlay">
+		<div class="latest-blog-thumb show-for-large">
+			<a href="<?= get_permalink($pid); ?>" aria-label="Read More about <?= $recent['post_title']; ?>">
 				<?= get_the_post_thumbnail($pid, 'blog-thumb'); ?>	
-				<div class="latest-blog-overlay">
-					<div class="latest-blog-content">
-						<a href="<?= get_permalink($pid); ?>"><h3><?= $recent["post_title"]; ?></h3></a>
-					</div>
-				</div>	
-			</div>
-		</a>
+			</a>
+		</div> 
+		<div class="latest-blog-content">
+			<div class="latest-blog-title"><a href="<?= get_permalink($pid); ?>"><h3><?= $recent["post_title"]; ?></h3></a></div>
+			<?= $recent["post_excerpt"]; ?>
+		</div>
+		<div class="latest-blog-read">
+			<a class="button" href="<?= get_permalink($pid); ?>" aria-label="Read More about <?= $recent['post_title']; ?>">
+				Read More <?= get_icon('arrow right'); ?>
+			</a>
+		</div>
+	</div>
 
 	</div>
 	<?php

@@ -51,27 +51,15 @@
                                 height: 100%;
                                 object-fit: cover;
                             }
+                        }
+                        .latest-blog-overlay{
+                            background: $color-2;
 
-                            .latest-blog-overlay{
-                                pointer-events: none;
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                box-sizing: border-box;
-                                padding: 1rem;
+                            .latest-blog-content{
                                 position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                margin-right: -50%;
-                                transform: translate(-50%,-50%);
-                                background: linear-gradient( 180deg, rgba(82, 56, 129, 0) 40.54%, rgba(82, 56, 129, 0.75) 72.97%, rgba(82, 56, 129, 0.9) 100%);
-
-                                .latest-blog-content{
-                                    position: absolute;
-                                    top: 75%;
-                                    h3{
-                                        color: $white;
-                                    }
+                                top: 75%;
+                                h3{
+                                    color: $white;
                                 }
                             }
                         }

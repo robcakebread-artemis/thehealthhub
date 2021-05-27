@@ -1,9 +1,135 @@
 .team-wrapper {
-    padding: 2rem 0 1rem;
+    padding: 3rem 0 1rem;
 
     .section-heading {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 0;
         color: $body-font-color;
-    }    
+        h2{
+            margin: 0 auto 1rem;
+        }
+    }
+
+    .team-text{
+        text-align: center;
+        color: $color-1;
+        font-weight: 500;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .grid {
+        display: flex;
+        flex-flow: row wrap;
+
+        .column {
+            flex-grow: 1;
+            width: 25%;
+            max-width: 25%;
+            margin-bottom: 2rem;
+            padding: 0;
+
+            @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+                flex-basis: 45%;
+                margin-bottom: 1rem;
+                max-width: 50%;
+            }
+
+            .team-image{
+                img{
+                    display: block;
+                    margin: 20px auto;
+                    clear: both;
+                    border-radius: 50%;
+                }
+            }
+            
+            .team-name{
+                text-align: center;
+                margin-bottom: 1.5rem;
+                h3{
+                    font-size: 1rem;
+                    margin-bottom: 0.5rem;
+                }
+                p{
+                    font-size: 0.75rem;
+                    font-family: $title-font;
+                }
+            }
+        }
+    }
+    &.two-col{
+        .grid {
+            display: flex;
+            flex-flow: row wrap;
+    
+            .column {
+                flex-grow: 1;
+                width: 50%;
+                max-width: 50%;
+                margin-bottom: 2rem;
+    
+                @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+                    flex-basis: 100%;
+                    margin-bottom: 1rem;
+                }
+    
+                .team-image{
+                    img{
+                        display: block;
+                        margin: 20px auto;
+                        clear: both;
+                        border-radius: 50%;
+                    }
+                }
+                
+                .team-name{
+                    text-align: center;
+                    margin-bottom: 1.5rem;
+                    h3{
+                        font-size: 1rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    p{
+                        font-size: 0.75rem;
+                        font-family: $title-font;
+                    }
+                }
+                .team-content{
+                    padding: 0 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+.team-wrapper {
+        padding: 2rem 0 1rem;
+    
+        .section-heading {
+            text-align: center;
+            margin-bottom: 0;
+            color: $body-font-color;
+            h2{
+                margin-bottom: 1rem;
+            }
+        }
+        .grid {
+    
+            .column {
+                .team-name{
+                    text-align: center;
+                    margin-bottom: 1rem;
+                    h3{
+                        font-size: 0.65rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    p{
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+    }
 }

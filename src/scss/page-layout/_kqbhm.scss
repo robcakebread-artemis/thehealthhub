@@ -107,7 +107,7 @@
             /*grid-template-columns: repeat(auto-fill, minmax(49%, 1fr)) !important;
             grid-gap: 0;*/
             flex-flow: row wrap;
-            margin-bottom: 2rem;
+            margin-bottom: 0;
 
             .column {
                 flex-grow: 1;

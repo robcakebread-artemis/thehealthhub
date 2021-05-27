@@ -51,26 +51,25 @@ if ($aws_query->have_posts()) :
     while ($aws_query->have_posts()) : $aws_query->the_post();  
 
 ?>	
-        <div class="swiper-slide test-wrapper relative">
-            <div class="testimonial-content-wrapper">
-                <div class="grid testimonial-content-inner">  
-                    <div class="column">
-                        <span class="author aligncenter"><?= the_title(); ?></span>
-                        <div class="star-wrapper-slider"><?= get_icon('star'); ?><?= get_icon('star'); ?><?= get_icon('star'); ?><?= get_icon('star'); ?><?= get_icon('star'); ?></div>
-                        <div class="test-text">                
-                            <div class="test-quote"><?= get_icon('quote'); ?></div>    
-                            <?= the_content(); ?>
-                            <div class="test-quote after"><?= get_icon('quote'); ?></div>
-                        </div>
-                        <?php if ($show_meta): ?>
+    <div class="swiper-slide test-wrapper relative">
+        <div class="testimonial-content-wrapper">
+            <div class="grid testimonial-content-inner">  
+                <div class="column">
+                    <div class="test-text">                
+                        <div class="test-quote"><?= get_icon('quote'); ?></div>    
+                        <?= the_content(); ?>
+                        <div class="test-quote after"><?= get_icon('quote'); ?></div>
                         <div class="testimonial-meta">
-                            <div class="test-author"><?= the_title(); ?></div>
+                            <div class="test-author">
+                                <?= the_title(); ?> <span class="star-wrapper-slider"> <?= get_icon('star'); ?> <?= get_icon('star'); ?> <?= get_icon('star'); ?> <?= get_icon('star'); ?> <?= get_icon('star'); ?></span>
+                            </div>
                         </div>
-                        <?php endif; ?>    
                     </div>
+                    
                 </div>
             </div>
         </div>
+    </div>
 <?php endwhile;
     wp_reset_postdata(); 
     wp_reset_query();

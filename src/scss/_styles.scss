@@ -51,6 +51,17 @@ h3 {
 .default-header {
     h1 {
         font-size: rem-calc(32);
+        &:after {
+            width: 100%;
+            content: "";
+            height: 1px;
+            background: $color-1;
+            display: block;
+            margin-top: 1.5rem;
+            margin-left: -1rem;
+            margin-right: 2rem;
+            padding-right: 2rem;
+        } 
     }
     h2 {
         font-size: rem-calc(24);
@@ -78,10 +89,6 @@ h3 {
         margin: 0 auto 2.5rem;
         letter-spacing: 0.5px;
         border-bottom: 0;
-
-        &:after {
-           // @extend %header-line;
-        }        
     }
     &.with-intro {
         h2 {
