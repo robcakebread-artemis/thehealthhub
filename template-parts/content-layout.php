@@ -122,7 +122,13 @@ if( have_rows('layout', $pid) ):
 		/***********************************/
 		elseif( get_row_layout() == 'team' ):
             include(locate_template('template-parts/page-layout/layout_team.php'));   
-            $prev_layout = 'team';     
+            $prev_layout = 'team';    
+		/***********************************/
+		/* Add Price Block     */
+		/***********************************/
+		elseif( get_row_layout() == 'price' ):
+            include(locate_template('template-parts/page-layout/layout_price.php'));   
+            $prev_layout = 'price';      
 		/***********************************/
 		/* Add Title Break                 */
 		/***********************************/

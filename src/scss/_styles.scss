@@ -297,6 +297,15 @@ body {
         font-size: rem-calc(14);
     }
 
+    .default-header {
+        h1 {
+            &:after {
+                width: 80%;
+                margin: 1rem auto !important;
+            } 
+        }
+    }
+
 }
 
 @media screen and (max-width: map-get($gl-mq-list, 'xs') ) {

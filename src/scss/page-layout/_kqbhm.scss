@@ -204,8 +204,9 @@
             .icon-link-wrapper.full-width {
                 &.overlay {
                     div.icon-title {
+                        top: 18%;
                         h3.secondary-title {
-                            font-size: rem-calc(20);
+                            font-size: rem-calc(12);
                         }
                     }
                 }

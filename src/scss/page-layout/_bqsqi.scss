@@ -26,22 +26,37 @@
 
     &.three-one{
         .grid {
+            align-items: flex-start !important;
+
             .column {
                 padding: 0 1rem;
                 flex: 1;
 
                 &:first-child {
                     padding-left: 0;
+                    align-items: flex-start;
                     flex: 3;
+                    @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+                        flex-basis: 100%;
+                    }
                 }
                 &:last-child {
                     padding-right: 0;
-                    align-self: flex-end;
+                    align-items: flex-start;
+                    flex: 2;
+                    @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+                        flex-basis: 100%;
+                        padding: 0;
+                    }
                 }
 
                 @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
                     flex-basis: 100%;
                 }
+            }
+            header{
+                border-bottom: 0.5px solid $color-1;
+                width: 60%;
             }
         }
     }
@@ -109,18 +124,17 @@
                 height: 100%;
                 display: flex;
                 justify-content: center;
-                max-width: 300px;
                 
                 img {
-                    //object-fit: cover;
-                    //width: 100%;
-                    //height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
                 }
 
             }
             
             .inner-text {
-                padding: 0 4rem 0 0;
+                padding: 0.5rem 4rem 0 0;
             }
         }
 
@@ -148,6 +162,25 @@
     }
 }
 
+@media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+    .bqsqi-wrapper {
+        .grid {
+            &.single {
+                grid-template-columns: 100% !important;
+            }
+            &.halfimage {
+                .inner-text {
+                    padding: 1rem 0 0;
+                }
+            }
+
+            .column {
+                padding: 0;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
     .bqsqi-wrapper {
         .grid {
@@ -156,7 +189,7 @@
             }
             &.halfimage {
                 .inner-text {
-                    padding: 0;
+                    padding: 1rem 0 0;
                 }
                 .image {
                     margin-top: 2rem;
