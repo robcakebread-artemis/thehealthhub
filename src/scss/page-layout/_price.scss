@@ -16,19 +16,49 @@
     
                 &:first-child{
                     padding: 0 1rem 0 0;
+                    @media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+                        width: 45%;
+                        max-width: 45%;
+                        padding: 0 0 0 1rem;
+
+                    }
+                    @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
+                        padding: 1rem 1rem 0;
+                    }
+                }
+
+                &:nth-child(2) {
+                    @media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+                        width: 45%;
+                        max-width: 45%;
+                    }
+                }
+
+                &:last-child {
+                    @media screen and (max-width: map-get($gl-mq-list, 'md') ) {
+                        width: 100%;
+                        max-width: 100%;
+                        padding: 0 1rem;
+                    }
                 }
     
                 @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
-                    flex-basis: 45%;
-                    margin-bottom: 1rem;
-                    max-width: 50%;
+                    flex-basis: 100%;
+                    max-width: none;
+                    margin-bottom: 0;
+                    padding: 0 1rem 1rem;
                 }
     
                 .therapy-name{
                     background-color: $color-3;
                     padding: 0.5rem 1rem;
-                    font-weight: bold;
-                    color: $color-1
+                    h3{
+                        font-family: $body-font;
+                        font-weight: bold;
+                        color: $color-1;
+                        margin-bottom: 0;
+                        font-size: 1rem;
+                    }
                 }
 
                 .sessions{
@@ -40,6 +70,27 @@
                     .price{
                         font-weight: bold;
                         float: right;
+                    }
+                }
+
+                .appointment-form{
+                    background-color: $color-1;
+                    padding: 1rem 1rem;
+                    h3{
+                        color: $white;
+                        font-size: 1rem;
+                    }
+
+                    form .gform_button{
+                        background-color: $white;
+                        padding: 1rem 2rem;
+                        height: auto;
+                        color: $color-1;
+                        display: block;
+                        margin: 0 auto;
+                        &:hover{
+                            background: darken($white, 20%);
+                        }
                     }
                 }
             }

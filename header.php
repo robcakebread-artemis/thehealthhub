@@ -75,7 +75,7 @@ endif;
         endif;
 
         if (!get_field('hide_breadcrumb')):
-            //include(locate_template('template-parts/partials/partial-breadcrumbs.php'));
+            include(locate_template('template-parts/partials/partial-breadcrumbs.php'));
         endif;
     ?>
 	<div id="content" class="site-content">

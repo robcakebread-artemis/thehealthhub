@@ -110,7 +110,7 @@ header {
                     color: $header-link-color;
     
                     &:hover {
-                        color: $color-3;
+                        color: darken($header-link-color, 10%);;
                     }
                 }
                 

@@ -10,45 +10,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="no-hero-page-header">
-        <div class="container">
-            <h2 class="page-title"><?= get_field('page_title'); ?></h2>
-        </div>
-    </header>
     <?php
-    //include(locate_template('template-parts/partials/partial-breadcrumbs.php'));
+     include(locate_template('template-parts/content-layout.php')); 
 ?>   
 
 	<div class="entry-content">
         <div class="container">
             <div class="grid main-content">
-                <div class="column color-1-bg">
-                    <?php
-                        $title = get_field('title');
-                        $left_column = get_field('left_column');
-                        $right_column = get_field('right_column');
-
-                    ?>
-                    <h2><?= $title ?></h2>
-                    <div class="grid">
-                        <div class="column contact-intro-john">
-                            <?= $left_column ?>
-                        </div>
-                        <div class="column contact-intro-text">
-                            <?= $right_column ?>
-                        </div>
-                    </div>
-                    <?php
-                        $enq_id = get_field('general_enquiry_form_id');
-
-                        if ($enq_id):
-                    ?>
-                            <?php echo do_shortcode($enq_id); ?>
-                    <?php
-                        endif;
-                    ?>                    
-               </div>
-                <div class="column grey-800-bg">
+                <div class="column">
                     <?php
                     if( have_rows('offices') ):
                     ?>
@@ -110,9 +79,23 @@
                     endif;
                     ?>                    
                 </div>
+                <div class="column">
+                    <?php
+                        $title = get_field('form_title');
+                    ?>
+                    <h3><?= $title ?></h3>
+                    <?php
+                        $enq_id = get_field('general_enquiry_form_id');
+
+                        if ($enq_id):
+                    ?>
+                            <?php echo do_shortcode($enq_id); ?>
+                    <?php
+                        endif;
+                    ?>                    
+               </div>
             </div>
         </div>
-        <?php include(locate_template('template-parts/content-layout.php')); ?>
 
         <?php include(locate_template('template-parts/partials/partial-footer-components.php')); ?>
 

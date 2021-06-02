@@ -10,7 +10,7 @@
                 <div class="column aligncenter-mob menu-lg">
                     <div id="header-right">
                         <div class="contact-details">
-                            <div class="phone-number contact-detail"><?= get_icon('phone-alt'); ?><?= get_field('options_phone','options'); ?></div>
+                            <div class="phone-number contact-detail"><a href="<?= get_field('phone_mobile_link','options'); ?>"><?= get_icon('phone-alt'); ?><?= get_field('options_phone','options'); ?></a></div>
                             <? /*<div class="email-address contact-detail"><a href="mailto:<?= $email; ?>"><?= get_icon('mail-alt'); ?><?= do_shortcode('[email]'.get_field('options_email','options').'[/email]'); ?></a></div> */ ?>
                         </div>
                         <?php include(locate_template('template-parts/header/main-menu.php')); ?>
