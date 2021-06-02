@@ -114,7 +114,7 @@ function sc_social( $atts, $content = null) {
 		$social .= '<li><a href="'.$insta.'" target="_blank" class="social-link instagram" rel="noopener noreferrer" aria-label="Instagram">'.get_icon('instagram-square').'</a></li>';
 	}
 	if ($youtube) {
-		$social .= '<li><a href="'.$youtube.'" target="_blank" class="social-link" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube social"></i></a></li>';
+		$social .= '<li><a href="'.$youtube.'" target="_blank" class="social-link youtube" rel="noopener noreferrer" aria-label="YouTube">'.get_icon('youtube-square').'</a></li>';
 	}	
     
     $social .= "</ul>";	
