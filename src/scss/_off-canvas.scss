@@ -101,9 +101,9 @@
         button.submenu-arrow {
 			right: 2rem;
 			position: absolute;
-			top: 0.7rem;
+			top: 0;
 			font-size: 1.25rem;
-			color: $color-3;
+			color: $color-1;
 			background: none;
 			padding: 0;
             outline: none;
@@ -117,7 +117,7 @@
             &:after{
                 content: "";
                 position: absolute;
-                background-color: $color-3;
+                background-color: $color-1;
                 transition: transform 0.25s ease-out;
             }
         
@@ -227,13 +227,24 @@ body.off-canvas-open {
         transition: transform 0.8s;
         transition-timing-function: cubic-bezier(0.7,0,0.3,1);
     }
-
+    .off-canvas{
+        .menu-primary-container {
+            width: 90%;
+        }  
+    }
 }
 
 
 @media screen and (min-width: map-get($gl-mq-list, 'sm'))  and (max-width: map-get($gl-mq-list, 'md')) {
-
     .off-canvas .menu-main-menu-container {
         padding-top: 4rem;
+    }
+}
+
+@media screen and (max-width: map-get($gl-mq-list, 'sm')){
+    .off-canvas{
+        .menu-primary-container {
+            width: 100%;
+        }  
     }
 }
