@@ -12,8 +12,8 @@
         // Gets every "category" (term) in this taxonomy to get the respective posts
         $terms = get_terms( array( 
             'taxonomy' => $taxonomy,
-            'parent' => 50,
-            'order' => 'DESC'
+            'parent' => 3,
+            'orderby' => 'ID'
         ) );
 
         foreach( $terms as $term ) : ?>
@@ -22,7 +22,7 @@
                     <div class="content-wrapper">             
                         <div class="grid header">
                             <header class="default-header aligncenter">
-                                <h2>Read My <?php echo $term->name; ?> Reviews</h2>
+                                <h2><?php echo $term->name; ?></h2>
                             </header>  
                         </div>
                     </div>

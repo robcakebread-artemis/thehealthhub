@@ -47,12 +47,6 @@
             position: relative;
             box-sizing: border-box;
             overflow: hidden;
-            img{
-                &:hover {
-                    transition: transform 2s ease;
-                    transform: scale(1.2);
-                }
-            }
         }
 
         img {
