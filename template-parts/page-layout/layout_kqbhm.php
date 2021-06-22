@@ -25,7 +25,7 @@ endif;
 if ($full_width_images):
     
     if ((int)$max > 2):
-        $image_size = 'full-width';
+        $image_size = 'gallery-thumb-square';
     else:
         $image_size = 'full';
     endif;
@@ -54,30 +54,36 @@ if( have_rows('iconimage_blocks') ):
 <?php
     while ( have_rows('iconimage_blocks') ) : the_row();
         $image = '';
-        $image = get_sub_field('icon_image');
-        if ($image): ?>
-            <?php $image = wp_get_attachment_image( $image, $image_size ); ?>
-        <?php endif;
+        if ($imagetype == 'Icons'): 
+            $icon = get_sub_field('fa_code'); 
+            $image .= ''.get_icon('dot').'';
+        else: 
+            $image = get_sub_field('icon_image');
+            if ($image): ?>
+                <div class="icon-image">
+                 <?php $image = wp_get_attachment_image( $image, $image_size ); ?>
+                </div>
+           <?php endif;
+        endif;
 
         $link = get_sub_field('icon_link_title');
 
         $icon_text = get_sub_field('icon_text');
 ?>
         <div class="aligncenter column">
-            <div class="icon-link-wrapper <?= ($classes ? ' '.$classes : ''); ?>">
-                <?php if ($link['url'] != '#'): ?>
-                    <a href="<?= $link['url']; ?>" aria-label="<?= $link['title']; ?>">
+            <div class="icon-link-wrapper">
+                <?php if ($link['url'] != '#'):
+                    $link_target = $link['target'] ? $link['target'] : '_self'; ?>
+                    <a href="<?= $link['url']; ?>" target="<?php echo esc_attr( $link_target ); ?>" aria-label="<?= $link['title']; ?>">
                 <?php endif; ?>
                 <?php if ($image): ?>
-                <div class="icon-image">
-                    <?= $image; ?>         
-                </div>                                   
+                <?= $image; ?>                                            
                 <div class="icon-title">
                     <h3 class="secondary-title">
                         <?= $link['title']; ?>
                     </h3>
                     <?php if ($style == 'style21'): ?>
-                        <a href="<?= $link['url']; ?>" class="button wireframe white">LEARN MORE <?= get_icon('arrow right'); ?></a>
+                        <a href="<?= $link['url']; ?>" class="button wireframe white">Read More</a>
                     <?php endif; ?>                        
                 </div>    
                 <?php endif; ?>
@@ -88,7 +94,7 @@ if( have_rows('iconimage_blocks') ):
                     <div class="icon-link-text"><?= $icon_text; ?>
                         <?php if ($link['url'] != '#'): 
                             if ($imagetype == 'Images'): ?>
-                            <p><a href="<?= $link['url']; ?>" aria-label="<?= $link['title']; ?>">LEARN MORE <?= get_icon('arrow right'); ?></a></p>
+                            <p><a href="<?= $link['url']; ?>" aria-label="<?= $link['title']; ?>">Read more</a></p>
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>
