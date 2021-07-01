@@ -4,7 +4,7 @@
             <div class="grid">	
                 <div class="column aligncenter-mob menu-lg">
                     <div id="logo">
-                        <a href="/" title="The Health Hub Logo"><img src="<?= get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" alt="The Health Hub Logo"/></a>
+                        <a href="/" title="The Health Hub Logo"><img src="<?= get_stylesheet_directory_uri(); ?>/img/logo.svg" width="300" alt="The Health Hub Logo"/></a>
                     </div>
                 </div>
                 <div class="column aligncenter-mob menu-lg">

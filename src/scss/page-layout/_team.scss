@@ -22,6 +22,7 @@
     .grid {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
 
         .column {
             flex-grow: 1;

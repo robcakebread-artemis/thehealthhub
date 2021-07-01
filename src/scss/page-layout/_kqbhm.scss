@@ -3,13 +3,14 @@
         header{
             display: initial;
             h2{
-                text-align: left;
-                font-size: 1.25rem;
-                font-weight: 800;
+                text-align: center;
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 400;
                 padding: 0;
             }
             h3{
-                text-align: left;
+                text-align: center;
                 font-size: 1.25rem;
                 font-weight: 800;
                 padding: 0;
@@ -50,7 +51,8 @@
                     }
                 }
                 img{
-                    max-height: 50px;
+                    max-height: 80px;
+                    width: auto;
                 }
                 .icon-link-text {
                     padding: 1rem;
@@ -178,10 +180,21 @@
 @media screen and (max-width: map-get($gl-mq-list, 'md')) {
     .kqbhm-wrapper {
         padding-top: 4rem;
+        .container{
+            header{
+                h2{
+                    font-size: 1.25rem;
+                }
+                h3{
+                    font-size: 1rem;
+                }
+            }
+        }
         
         .grid.style2 {
             .column {
                 padding: 0 1rem;
+                margin-bottom: 2rem;
             }
 
             .icon-link-wrapper.full-width {
@@ -224,6 +237,12 @@
                         }
                     }
                 }
+            }
+            .icon-link-wrapper{
+                img{
+                    max-height: 60px;
+                    width: auto;
+                }
             }            
         }   
         .grid.style3 {
@@ -253,7 +272,15 @@
         .grid {
             &.style1 {
                 .column {
-                    flex-basis: 100%;
+                    flex-basis: 100%; 
+                    margin-bottom: 2rem;
+
+                    div.icon-title {
+                        h3.secondary-title {
+                            font-size: rem-calc(16);
+                            margin: 0 0 0.5rem;
+                        }
+                    }
                 }
             }
             &.style3 {

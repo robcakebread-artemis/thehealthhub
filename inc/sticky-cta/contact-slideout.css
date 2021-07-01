@@ -42,10 +42,10 @@
 	left:-50px;
 	width:50px;
 	height:200px;
-	background: #10BC74;
+	background: #f7f7f7;
 	top:calc(50% - 100px);
 	border-radius:10px 0 0 10px;
-	color:#fff;
+	color:#223959;
 	-webkit-box-shadow:-2px 0 5px 1px rgba(0,0,0,0.25);
 	box-shadow:-2px 0 5px 1px rgba(0,0,0,0.25);
 	cursor:pointer;
@@ -189,7 +189,7 @@
 		content:' ';
 		height:23px;
 		width:2px;
-		background-color:#fff;
+		background-color:#223959;
 		right:24px;
 		top:13px;
 	}

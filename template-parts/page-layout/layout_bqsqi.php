@@ -50,9 +50,10 @@
                         <?= get_sub_field('column_content'); 
                         $link = get_sub_field('link');
                         $link_class = get_sub_field('link_class');
+                        $link_target = $link['target'] ? $link['target'] : '_self';
                         if ($link): ?>
                             <div class="link<?= ($link_class ? ' '.$link_class : ''); ?>">
-                                <a href="<?= $link['url']; ?>" class="button"><?= $link['title']; ?><?= get_icon('arrow right'); ?></a>
+                                <a href="<?= $link['url']; ?>" class="button" target="<?php echo esc_attr( $link_target ); ?>"><?= $link['title']; ?><?= get_icon('arrow right'); ?></a>
                             </div>
                         <?php endif; ?>
                     </div>  

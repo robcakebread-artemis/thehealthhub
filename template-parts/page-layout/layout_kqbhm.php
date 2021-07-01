@@ -47,7 +47,7 @@ if( have_rows('iconimage_blocks') ):
     <div class="container<?= ($full_width_page ? '-full-width' : ''); ?>">
         <?php if ($heading): ?>
             <header class="section-heading">
-                <h3><?= $heading; ?></h3>
+                <h2><?= $heading; ?></h2>
             </header>
         <?php endif; ?>     
         <div class="grid <?= ($style ? ' '.$style : ' style1'); ?>"<?= ($grid_styles ? ' style="'.$grid_styles.'"' : ''); ?>>
