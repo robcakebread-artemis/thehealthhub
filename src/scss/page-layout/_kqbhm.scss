@@ -8,6 +8,12 @@
                 font-weight: 800;
                 padding: 0;
             }
+            h3{
+                text-align: left;
+                font-size: 1.25rem;
+                font-weight: 800;
+                padding: 0;
+            }
         }
     }
     .grid {
@@ -237,6 +243,13 @@
 
 @media screen and (max-width: map-get($gl-mq-list, 'xs')) {
     .kqbhm-wrapper {
+        .container{
+            header{
+                h3{
+                    font-size: 1rem;
+                }
+            }
+        }
         .grid {
             &.style1 {
                 .column {
