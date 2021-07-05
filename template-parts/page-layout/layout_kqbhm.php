@@ -47,7 +47,7 @@ if( have_rows('iconimage_blocks') ):
     <div class="container<?= ($full_width_page ? '-full-width' : ''); ?>">
         <?php if ($heading): ?>
             <header class="section-heading">
-                <h2><?= $heading; ?></h2>
+                <h3><?= $heading; ?></h3>
             </header>
         <?php endif; ?>     
         <div class="grid <?= ($style ? ' '.$style : ' style1'); ?>"<?= ($grid_styles ? ' style="'.$grid_styles.'"' : ''); ?>>
@@ -70,7 +70,7 @@ if( have_rows('iconimage_blocks') ):
 
         $icon_text = get_sub_field('icon_text');
 ?>
-        <div class="aligncenter column">
+        <div class="column">
             <div class="icon-link-wrapper">
                 <?php if ($link['url'] != '#'):
                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>

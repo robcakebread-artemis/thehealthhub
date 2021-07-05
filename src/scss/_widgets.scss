@@ -39,4 +39,7 @@
 
 .widget_media_image{
     margin-bottom: 1rem;
+    img{
+        max-width: 200px !important;
+    }
 }

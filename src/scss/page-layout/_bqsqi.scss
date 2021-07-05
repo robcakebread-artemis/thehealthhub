@@ -90,10 +90,48 @@
                 @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
                     flex-basis: 100%;
                 }
+
+                .inner-text{
+                    h3{
+                        font-family: $body-font;
+                    }
+                }
             }
-            header{
-                border-bottom: 0.5px solid $color-1;
-                width: 60%;
+        }
+    }
+
+    &.therapist{
+        .grid {
+            align-items: center !important;
+            .column {
+                padding: 0 1rem;
+                flex: 1;
+
+                &:last-child {
+                    padding-right: 0;
+                    align-items: flex-start;
+                    @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+                        flex-basis: 100%;
+                    }
+                }
+                &:first-child {
+                    padding-left: 0;
+                    align-items: flex-end;
+                    @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+                        flex-basis: 100%;
+                        padding: 0;
+                    }
+                }
+
+                @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
+                    flex-basis: 100%;
+                }
+
+                .inner-text{
+                    h3{
+                        font-family: $body-font;
+                    }
+                }
             }
         }
     }
@@ -230,10 +268,19 @@
 @media screen and (max-width: map-get($gl-mq-list, 'sm') ) {
     .bqsqi-wrapper {
 
-        &.three-one-reverse{
+        &.three-one-reverse, &.therapist{
             .grid{
                 .column {
+                    &:first-child{
+                        text-align: center;
+                    }
                     padding: 0 !important;
+                    .inner-text{
+                        img{
+                            margin: 0;
+                            float: none !important;
+                        }
+                    }
                 }
             }
         }

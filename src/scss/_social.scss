@@ -32,6 +32,10 @@ ul.social-icons.light {
 
 #colophon ul.social-icons{
     li {
+
+        a .youtube-square .icon {
+            font-size: rem-calc(23);
+        }  
         a .icon {
             color: $footer-social-icons-color;
             font-size: rem-calc(25);
