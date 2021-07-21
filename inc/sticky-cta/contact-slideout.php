@@ -1,8 +1,8 @@
 <div id="art-side-form" class="art-side-form closed">
 	<div id="art-side-form-tab" class="art-side-form-tab">
 		<div class="art-side-form-side-text">Contact Us</div>
-		<div class="art-side-form-side-icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-	</div>
+		<div class="art-side-form-side-icon"><?= get_icon('mail-alt'); ?></div>
+	</div> 
 	<div class="art-side-form-inner">
 		<h3>Contact Us</h3><p>Please get in touch using the form below</p>
 		<div class="frm_forms" id="frm_form_15_container">

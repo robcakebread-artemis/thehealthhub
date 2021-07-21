@@ -480,9 +480,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 
 add_action( 'wp_enqueue_scripts', 'custom_slideout_load_scripts' );
 function custom_slideout_load_scripts() {
-	wp_enqueue_style( 'contact-slideout-style', get_stylesheet_directory_uri() . '/inc/sticky-cta/contact-slideout.css');
 	wp_enqueue_script( 'contact-slideout-script', get_stylesheet_directory_uri() . '/inc/sticky-cta/contact-slideout.js', array('jquery'), '20151215', true );
-	wp_enqueue_style( 'font-awesome', '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'custom_swiper_load_scripts' );
