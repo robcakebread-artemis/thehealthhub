@@ -128,7 +128,7 @@ function aws_paginator( $first_page_url ){
             $new_page_no = '/page/'.($current_page - 1).'/';
         endif;
 
-		$pagination.= '<a href="'. $first_page_url . ($new_page_no) . $search_query . '" class="prev page-numbers"><</a>';
+		$pagination.= '<a href="'. $first_page_url . ($new_page_no) . $search_query . '/" class="prev page-numbers"><</a>';
 
 
 	// when to display "..." and the first page before it

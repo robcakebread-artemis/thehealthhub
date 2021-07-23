@@ -8,7 +8,7 @@
 		<div class="frm_forms" id="frm_form_15_container">
 
     <?php //echo do_shortcode( '[contact-form-7 id="$form_id" title="Contact form 1"]' ); ?>
-	<?php echo do_shortcode('[gravityform id="1" title="false" ajax="true"]'); ?>
+	<?php echo do_shortcode('[gravityform id="2" title="false" ajax="true"]'); ?>
 	<?php  //echo FrmFormsController::get_form_shortcode(array('id'=> 2, 'title' => false, 'description' => false, 'ajax' => true)); ?>
 
 </div>

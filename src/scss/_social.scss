@@ -15,7 +15,10 @@ ul.social-icons{
             margin-right: 0.5rem;
             transition: all 0.2s ease-in-out;
             padding: 0;
-        }  
+        }
+        .youtube-square .icon{
+            margin-left: 0.1rem;
+        }
         
         &:last-child a .icon {
             margin-right: 0;
