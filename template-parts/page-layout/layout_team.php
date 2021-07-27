@@ -29,14 +29,16 @@ $aws_query = new WP_Query($args); ?>
             <?php if ($aws_query->have_posts()) :
             while ($aws_query->have_posts()) : $aws_query->the_post();  ?>	
                 <? $job_title = get_field('job_title'); ?>
-                <div class="column">
+                <div class="column" <?php if ( is_page('therapists') ): ?>id="<?= the_title(); ?>"<? endif ?>>
+                    <?php if ( !is_page('therapists') ): ?><a href="/therapists/#<?= the_title(); ?>"><? endif ?>
                     <div class="team-image"><?= get_the_post_thumbnail(); ?></div>
                     <div class="team-name">
                         <h3><?= the_title(); ?></h3>
                         <p><?= $job_title ?></p>
                     </div>
+                    <?php if ( !is_page('therapists') ): ?></a><? endif ?>
                     <?php if ( is_page('therapists') ): ?>
-                        <div class="team-content"><?= the_content(); ?></div>
+                        <div class="team-content" ><?= the_content(); ?></div>
                     <? endif ?>
 
                 </div>

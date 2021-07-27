@@ -10,12 +10,17 @@ $heading = get_sub_field('kqbhm_heading');
 $after_content = get_sub_field('content_after_images');
 $style = get_sub_field('kqbhm_style');
 $grid_styles = '';
+$column_styles = '';
 
-$max = ($max ? $max : '3');
 if ($max != '3'):
-    //$grid_styles .= 'grid-template-columns: repeat('.$max.', 1fr);';
-    //$grid_styles .= 'flex-basis: 24%;';
-    //$column_styles .= 'flex-basis: %;';
+    $grid_styles .= 'grid-template-columns: repeat('.$max.', 1fr);';
+    $grid_styles .= 'flex-basis: 24%;';
+endif;
+
+if ($max > 3):
+    $column_styles .= 'width: auto; max-width: inherit;';
+else:
+    $column_styles .= 'width: 20%; max-width: 20%;';
 endif;
 
 if ($style == 'style2' or 'style3'):
@@ -70,7 +75,7 @@ if( have_rows('iconimage_blocks') ):
 
         $icon_text = get_sub_field('icon_text');
 ?>
-        <div class="column">
+        <div class="column" <?= ($column_styles ? ' style="'.$column_styles.'"' : ''); ?>>
             <div class="icon-link-wrapper">
                 <?php if ($link['url'] != '#'):
                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>

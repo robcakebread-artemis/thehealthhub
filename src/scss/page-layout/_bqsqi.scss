@@ -100,41 +100,6 @@
         }
     }
 
-    // &.therapist{
-    //     .grid {
-    //         align-items: center !important;
-    //         .column {
-    //             padding: 0 1rem;
-    //             flex: 1;
-
-    //             &:last-child {
-    //                 padding-right: 0;
-    //                 align-items: flex-start;
-    //                 @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
-    //                     flex-basis: 100%;
-    //                 }
-    //             }
-    //             &:first-child {
-    //                 padding-left: 0;
-    //                 align-items: flex-end;
-    //                 @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
-    //                     flex-basis: 100%;
-    //                     padding: 0;
-    //                 }
-    //             }
-
-    //             @media screen and (max-width: map-get($gl-mq-list, 'sm')) {
-    //                 flex-basis: 100%;
-    //             }
-
-    //             .inner-text{
-    //                 h3{
-    //                     font-family: $body-font;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
     &.therapist{
         .grid {
             align-items: center !important;
@@ -281,6 +246,12 @@
                 font-size: 1rem;
                 font-weight: 600;
             }
+        }
+    }
+
+    &#top-text{
+        .inner-text {
+            padding: 0 5rem;
         }
     }
 
