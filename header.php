@@ -26,7 +26,7 @@ $phone_mobile_link = ( get_field('phone_mobile_link','options') );
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" crossorigin="use-credentials" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
+    <?php gravity_form_enqueue_scripts(2,true) ?>
 
     <?php wp_head(); ?>
     <?= get_field('options_custom_header_code','options'); ?>

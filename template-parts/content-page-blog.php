@@ -28,7 +28,7 @@ $size = 'full';
                 <div><?= the_excerpt(); ?></div>
             </div>
             <div class="latest-blog-read">
-                <a class="button" href="<?= get_permalink($pid); ?>" aria-label="Read More about <?= $recent['post_title']; ?>">
+                <a class="button" href="<?= get_permalink(); ?>" aria-label="Read More about <?= $recent['post_title']; ?>">
                     Read More <?= get_icon('arrow right'); ?>
                 </a>
             </div>

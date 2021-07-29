@@ -75,7 +75,11 @@ if( have_rows('iconimage_blocks') ):
 
         $icon_text = get_sub_field('icon_text');
 ?>
+        <?php if ($style == 'style1'): ?>
         <div class="column" <?= ($column_styles ? ' style="'.$column_styles.'"' : ''); ?>>
+        <?php elseif ($style == 'style3'): ?>
+        <div class="column">
+        <?php endif; ?>
             <div class="icon-link-wrapper">
                 <?php if ($link['url'] != '#'):
                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>

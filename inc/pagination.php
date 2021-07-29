@@ -123,7 +123,7 @@ function aws_paginator( $first_page_url ){
     if ($current_page != 1)
     
         if (($current_page - 1) == 1):
-            $new_page_no = '/';
+            $new_page_no = '';
         else:
             $new_page_no = '/page/'.($current_page - 1).'/';
         endif;
